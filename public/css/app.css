@@ -1,0 +1,33 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Lato;
+}
+
+/* NAVBAR */
+.navbar{
+   margin-top: -10px;
+   margin-bottom: 1px;
+   height: 110px;
+   background-color:#002366;
+}
+.navbar-brand::after{
+    content:'Bibliotecas';
+    position:absolute;
+    left:120px;
+    top:70px;
+    font-size: 30px;
+    color:white;
+}
+.logo-duoc{
+    margin-top:-18px;
+}
+.busqueda{
+    margin-top: 13px;
+    position:relative;
+    right:1px;
+}
