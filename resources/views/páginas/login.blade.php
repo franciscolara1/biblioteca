@@ -3,6 +3,7 @@
 @section('login')
 
 <h2>Aca se crea un Login</h2>
-<h3>Voy a comprobar si se guardan los cambios</h3>
+<h3>  aaaaaaaaaaaaaaaa</h3>
+<h1>eeeeeeeeeeeeeeeeeee</h1>
 
 @endsection
