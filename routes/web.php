@@ -12,9 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/* Página Principal */
 Route::get('/', function () {
     return view('páginas.principal');
 });
+/* Login */
+Route::get('/login', function () {
+    return view('páginas.login');
+});
+
 
 
