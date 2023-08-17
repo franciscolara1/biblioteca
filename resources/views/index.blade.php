@@ -14,33 +14,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <!--Logo Duoc -->
+    <nav class="navbar navbar-expand-xl">
+      <div class="container">
+          <!--Logo Duoc -->
         <a class="navbar-brand" href="#">
-            <img src="img/Logo_DuocUC.svg.png" width="300" height="80" class="d-inline-block logo-duoc"alt="">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="busqueda">
-              <a class="nav-link" href="#">
-                <span>
-                    <img src="img/busqueda.png" width="55"height="50"alt="">
-                </span></a>
-                <p style="margin-top:-10px;color:white">Consúltanos</p>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Nose</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <h1 id="imprime"></h1>
+          <img src="img/Logo_duoc.png" width="300" height="80" class="d-inline-block logo-duoc"alt="">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="busqueda">
+            <a class="nav-link" href="#">
+              <span>
+                  <img src="img/busqueda.png" width="55"height="50"alt="">
+              </span></a>
+              <p style="margin-top:-10px;color:white">Consúltanos</p>
+          </li>
+          <li class="item">
+            <a class="nav-link" href="#">
+              <span>
+                  <img src="img/busqueda.png" width="55"height="50"alt="">
+              </span></a>
+              <p style="margin-top:-10px;color:white">Consúltanos</p>
+          </li>
+          <li class="item">
+            <a class="nav-link" href="#">
+              <span>
+                  <img src="img/busqueda.png" width="55"height="50"alt="">
+              </span></a>
+              <p style="margin-top:-10px;color:white">Consúltanos</p>
+          </li>
+          <li class="item">
+            <a class="nav-link" href="#">
+              <span>
+                  <img src="img/busqueda.png" width="55"height="50"alt="">
+              </span></a>
+              <p style="margin-top:-10px;color:white">Consúltanos</p>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
 @yield('content')
 @yield('login')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
