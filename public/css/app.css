@@ -26,15 +26,25 @@ body{
 .navbar-nav{
     display:flexbox;
     flex-direction: row;
-    margin-left: 50%;
-    margin-right: 100px;
+    margin-left: 40%;
+    
     
 }
 .logo-duoc{
     margin-top:-18px;
 }
+.login{
+    margin-right: 60px;
+}
 ul > li {
     margin-top: 18px;
-    margin-left: 10px;
+    margin-left: 20px;
     justify-content: space-around;
+}
+li > p:hover{
+    color:yellow;
+}
+li > p{
+    margin-top:-10px;
+    color:aliceblue;
 }

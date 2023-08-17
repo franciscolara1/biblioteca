@@ -8,6 +8,7 @@
     <!-- CSS -->
     <link href="css/app.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,37 +19,37 @@
       <div class="container">
           <!--Logo Duoc -->
         <a class="navbar-brand" href="#">
-          <img src="img/Logo_duoc.png" width="300" height="80" class="d-inline-block logo-duoc"alt="">
+          <img src="img/Logo_duoc.png" width="300" height="70" class="d-inline-block logo-duoc"alt="">
       </a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="busqueda">
             <a class="nav-link" href="#">
               <span>
-                  <img src="img/busqueda.png" width="55"height="50"alt="">
+                  <img onmouseover="change()" onmouseout="normal()" src="img/consulta.png" width="55"height="50"alt="">
               </span></a>
-              <p style="margin-top:-10px;color:white">Consúltanos</p>
+              <p id="textMenu1"style="position:relative;right:7px">Consúltanos</p>
+          </li>
+          <li class="login">
+            <a class="nav-link" href="#">
+              <span>
+                  <img onmouseover="change2()" onmouseout="normal()" src="img/usuario.png" width="55"height="50"alt="">
+              </span></a>
+              <p id="textMenu2">Mi cuenta</p>
           </li>
           <li class="item">
             <a class="nav-link" href="#">
               <span>
-                  <img src="img/busqueda.png" width="55"height="50"alt="">
+                  <img onmouseover="change3()" onmouseout="normal()" src="img/encontrar.png" width="55"height="50"alt="">
               </span></a>
-              <p style="margin-top:-10px;color:white">Consúltanos</p>
+              <p id="textMenu3"style="position:relative;left:20px">Libros</p>
           </li>
           <li class="item">
             <a class="nav-link" href="#">
               <span>
-                  <img src="img/busqueda.png" width="55"height="50"alt="">
+                  <img onmouseover="change4()" onmouseout="normal()" src="img/consulta.png" width="55"height="50"alt="">
               </span></a>
-              <p style="margin-top:-10px;color:white">Consúltanos</p>
-          </li>
-          <li class="item">
-            <a class="nav-link" href="#">
-              <span>
-                  <img src="img/busqueda.png" width="55"height="50"alt="">
-              </span></a>
-              <p style="margin-top:-10px;color:white">Consúltanos</p>
+              <p id="textMenu4">Consúltanos</p>
           </li>
         </ul>
       </div>
