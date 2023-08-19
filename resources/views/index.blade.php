@@ -8,39 +8,53 @@
     <!-- CSS -->
     <link href="css/app.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <!--Logo Duoc -->
+    <nav class="navbar navbar-expand-xl">
+      <div class="container">
+          <!--Logo Duoc -->
         <a class="navbar-brand" href="#">
-            <img src="img/Logo_DuocUC.svg.png" width="300" height="80" class="d-inline-block logo-duoc"alt="">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="busqueda">
-              <a class="nav-link" href="#">
-                <span>
-                    <img src="img/busqueda.png" width="55"height="50"alt="">
-                </span></a>
-                <p style="margin-top:-10px;color:white">Consúltanos</p>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <h1 id="imprime"></h1>
+          <img src="img/Logo_duoc.png" width="300" height="70" class="d-inline-block logo-duoc"alt="">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="busqueda">
+            <a class="nav-link" href="#">
+              <span>
+                  <img onmouseover="change()" onmouseout="normal()" src="img/consulta.png" width="55"height="50"alt="">
+              </span></a>
+              <p id="textMenu1"style="position:relative;right:7px">Consúltanos</p>
+          </li>
+          <li class="login">
+            <a class="nav-link" href="#">
+              <span>
+                  <img onmouseover="change2()" onmouseout="normal()" src="img/usuario.png" width="55"height="50"alt="">
+              </span></a>
+              <p id="textMenu2">Mi cuenta</p>
+          </li>
+          <li class="item">
+            <a class="nav-link" href="#">
+              <span>
+                  <img onmouseover="change3()" onmouseout="normal()" src="img/encontrar.png" width="55"height="50"alt="">
+              </span></a>
+              <p id="textMenu3"style="position:relative;left:20px">Libros</p>
+          </li>
+          <li class="item">
+            <a class="nav-link" href="#">
+              <span>
+                  <img onmouseover="change4()" onmouseout="normal()" src="img/consulta.png" width="55"height="50"alt="">
+              </span></a>
+              <p id="textMenu4">Consúltanos</p>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
 @yield('content')
 @yield('login')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
