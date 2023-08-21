@@ -8,13 +8,13 @@
     <!-- CSS -->
     <link href="css/app.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200;400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
     <nav class="navbar navbar-expand-xl">
       <div class="container">
           <!--Logo Duoc -->
@@ -25,31 +25,38 @@
         <ul class="navbar-nav">
           <li class="busqueda">
             <a class="nav-link" href="#">
-              <span>
-                  <img onmouseover="change()" onmouseout="normal()" src="img/consulta.png" width="55"height="50"alt="">
+              <span style="font-size:50px;">
+                 <i class="fi fi-sr-headset" id="icon1"></i>
               </span></a>
-              <p id="textMenu1"style="position:relative;right:7px">Consúltanos</p>
+              <a onmouseover="pintar()"onmouseout="normal()"id="textMenu1"style="position:relative;right:1px;bottom:30px;"href="#">Consúltanos</a>
           </li>
-          <li class="login">
+          <li class="busqueda">
             <a class="nav-link" href="#">
-              <span>
-                  <img onmouseover="change2()" onmouseout="normal()" src="img/usuario.png" width="55"height="50"alt="">
+              <span style="font-size:50px;">
+                 <i class="fi fi-sr-circle-user" id="icon2"></i>
               </span></a>
-              <p id="textMenu2">Mi cuenta</p>
+              <a id="textMenu2"style="position:relative;left:1px;bottom:30px;"href="#">Cuenta</a>
           </li>
-          <li class="item">
+          <li class="busqueda">
             <a class="nav-link" href="#">
-              <span>
-                  <img onmouseover="change3()" onmouseout="normal()" src="img/encontrar.png" width="55"height="50"alt="">
+              <span style="font-size:50px;">
+                <i class="fi fi-sr-book-alt" id="icon3"></i>
               </span></a>
-              <p id="textMenu3"style="position:relative;left:20px">Libros</p>
+              <a id="textMenu3"style="position:relative;left:1px;bottom:30px;"href="#">Libros</a>
           </li>
-          <li class="item">
+          <li class="busqueda">
             <a class="nav-link" href="#">
-              <span>
-                  <img onmouseover="change4()" onmouseout="normal()" src="img/consulta.png" width="55"height="50"alt="">
+              <span style="font-size:50px;">
+                <i class="fi fi-sr-book-open-reader"></i>
               </span></a>
-              <p id="textMenu4">Consúltanos</p>
+              <a id="textMenu4"style="position:relative;left:1px;bottom:30px;"href="#">Alumnos</a>
+          </li>
+          <li class="busqueda">
+            <a class="nav-link" href="#">
+              <span style="font-size:50px;">
+                <i class="fi fi-sr-chalkboard-user"></i>
+              </span></a>
+              <a id="textMenu5"style="position:relative;right:1px;bottom:30px;"href="#">Docentes</a>
           </li>
         </ul>
       </div>
