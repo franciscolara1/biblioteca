@@ -1,0 +1,44 @@
+#abrir{
+    position: absolute;
+    right:60px;
+    top:45px;
+    height: 40px;
+    
+}
+#abrir > i {
+    font-size: 25px;
+    position: relative;
+    bottom: 5px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1620px){
+
+
+}
+.menu{
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom:0;
+    background-color: #002366;
+    visibility:hidden;
+    
+}
+.nav-list{
+    flex-direction: column;
+    list-style-type: none;
+    display:flex;
+    align-items: end;
+}
+.menu > .nav-list > li > a{
+    text-decoration: none;
+    color:antiquewhite;
+}
+.visible{
+    visibility: visible;
+}
+#cerrar{
+    position: relative;
+    top:20px;
+    right: 4px;
+    width: 50px;
+}

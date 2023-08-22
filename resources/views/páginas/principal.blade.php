@@ -3,6 +3,6 @@
 @section('content')
 
 <section class="container">
-    <h2>hola</h2>
+  <h1>hola</h1>
 </section>
 @endsection

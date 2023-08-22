@@ -56,9 +56,7 @@ ul > li > a > span > i {
     color:aliceblue;
     text-decoration: none;
 }
-#textMenu1:hover,#textMenu2:hover,#textMenu3:hover,#textMenu4:hover,#textMenu5:hover{
-    color:#FFD400;
-}
+
 #textMenu2{
     position:absolute;
     

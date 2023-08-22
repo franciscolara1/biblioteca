@@ -1,10 +1,12 @@
-function pintar(){
-    const x = document.getElementById("icon1");
+const nav = document.querySelector(".menu");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar");
 
-    x.style.color = "#FFD400";
-}
-function normal(){
-    const x = document.getElementById("icon1");
 
-    x.style.color = "aliceblue";
-}
+abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
+})
+
+cerrar.addEventListener("click", () => {
+    nav.classList.remove("visible");
+})
