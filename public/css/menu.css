@@ -3,6 +3,7 @@
     right:60px;
     top:45px;
     height: 40px;
+    z-index: 99;
     
 }
 #abrir > i {
@@ -10,24 +11,27 @@
     position: relative;
     bottom: 5px;
 }
-@media only screen and (min-width: 1400px) and (max-width: 1620px){
-
-
-}
 .menu{
     position: absolute;
     top:0;
-    right: 0;
+    right: -250px;
     bottom:0;
     background-color: #002366;
-    visibility:hidden;
-    
+    visibility: hidden;
+    -webkit-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    width: 240px;
 }
 .nav-list{
     flex-direction: column;
     list-style-type: none;
     display:flex;
-    align-items: end;
+    align-items:end;
+    position: relative;
+    top:70px;
 }
 .menu > .nav-list > li > a{
     text-decoration: none;
@@ -35,10 +39,71 @@
 }
 .visible{
     visibility: visible;
+    right:0px;
 }
-#cerrar{
-    position: relative;
-    top:20px;
-    right: 4px;
-    width: 50px;
+/* icono animación */
+#burguer{
+    transition: display 2s 
+} 
+#x{ 
+    display:none;
+}
+
+.nav-list > li {
+    margin-top: 38px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+.nav-list > li:hover{
+    background-color: red;
+}
+/* Media queries */
+@media only screen and (min-width:500px) and (max-width:1550px){
+    .menu{
+        position: absolute;
+        top:0;
+        right: 0px;
+        bottom:0;
+        background-color: #002366;
+        display: none;
+        -webkit-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+        transition: all 300ms ease-in-out;
+        -webkit-transition: all 300ms ease-in-out;
+        width: 200px;
+    }
+    .visible{
+        display:block;
+        right:0px;
+    }
+}
+@media only screen and (min-width:100px) and (max-width:500px){
+    .menu{
+        position: absolute;
+        top:0;
+        right: 0px;
+        bottom:0;
+        background-color: #002366;
+        display: none;
+        -webkit-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+        transition: all 300ms ease-in-out;
+        -webkit-transition: all 300ms ease-in-out;
+        width: 140px;
+    }
+    .visible{
+        display:block;
+        right:0px;
+    }
+    #abrir{
+        position: absolute;
+        right:0px;
+        top:45px;
+        height: 40px;
+        z-index: 99;
+        
+    }
 }

@@ -20,7 +20,7 @@
 </head>
 <body class="bg-light">
     <header>
-      <nav class="navbar navbar-expand-xxl">
+      <nav class="navbar navbar-expand-xxl" >
         <div class="container">
             <!--Logo Duoc -->
           <a class="navbar-brand" href="#">
@@ -65,16 +65,19 @@
               </li>
           </ul>
         </div>
-        <button class="btn btn-warning"id="abrir"><i class="bi bi-list"></i></button>
+        <button class="btn btn-warning"id="abrir">
+          <i class="bi bi-list" id="burguer"></i>
+          <i class="bi bi-x-circle-fill"id="x"></i>
+        </button>
         </div>
       </nav>
       <nav class="menu">
         <ul class="nav-list">
-          <button class="btn btn-warning"id="cerrar"><i class="bi bi-x-circle-fill"></i></button>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Quienes somos</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Que hacemos</a></li>
+          <li><a class="d-xxl-none"href="#">Consultanos</a></li>
+          <li><a class="d-xxl-none"href="#">Cuenta</a></li>
+          <li><a class="d-xxl-none"href="#">Libros</a></li>
+          <li><a class="d-xxl-none"href="#">Alumnos</a></li>
+          <li><a class="d-xxl-none"href="#">Docentes</a></li>
         </ul>
       </nav>
     </header>

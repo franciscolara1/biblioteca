@@ -6,16 +6,16 @@
 
 body{
     font-family: Lato;
+    overflow: hidden;
 }
-
 /* NAVBAR */
 .navbar{
    margin-top: -15px;
    margin-bottom: 1px;
    height: 110px;
    background-color:#002366;
+   
 }
-
 .navbar-brand::before{
     content: 'Bibliotecas';
     position:absolute;
@@ -37,14 +37,14 @@ body{
     margin-top:-18px;
 }
 
-ul > li {
+.navbar-nav > li {
     margin-top: 38px;
     margin-left: 10px;
     margin-right: 10px;
     transition: transform .2s;
     
 }
-ul > li:hover{
+.navbar-nav > li:hover{
     transform: scale(1.1);
     
 }
@@ -64,3 +64,4 @@ ul > li > a > span > i {
 .busqueda > a > span >i:hover{
     color: #FFD400;
 }
+/*Media queries */
