@@ -1,0 +1,15 @@
+/*Sección CARDS */
+#cards{
+    margin-top:6%;
+}
+.row{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:normal;
+    margin-top: 2%;
+}
+.card{
+    width: 18rem;
+    margin-top:20px;
+}
