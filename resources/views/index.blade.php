@@ -12,6 +12,7 @@
     <link href="css/app.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
     <link href="css/menu.css" rel="stylesheet">
+    <link href="css/libros.css" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +21,7 @@
 </head>
 <body class="bg-light">
     <header>
-      <nav class="navbar navbar-expand-xxl" >
+      <nav class="navbar navbar-expand-xxl" id="navsito" >
         <div class="container">
             <!--Logo Duoc -->
           <a class="navbar-brand" href="#">

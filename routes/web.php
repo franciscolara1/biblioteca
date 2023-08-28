@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LibrosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/* Página Principal */
+/* Página Principal 
 Route::get('/', function () {
     return view('páginas.principal');
 });
+*/
+Route::get('/' , [LibrosController::class, 'index'])->name('libros');
 /* Login */
 Route::get('/login', function () {
     return view('páginas.login');
