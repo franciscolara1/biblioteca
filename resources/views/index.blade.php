@@ -19,7 +19,7 @@
       <div class="container">
           <!--Logo Duoc -->
         <a class="navbar-brand" href="#">
-          <img src="img/Logo_duoc.png" width="300" height="70" class="d-inline-block logo-duoc"alt="">
+          <img src="img/Logo_duoc.png"  width="300" height="70" class="d-inline-block logo-duoc"alt="">
       </a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
