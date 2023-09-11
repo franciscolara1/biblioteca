@@ -24,7 +24,7 @@
       <nav class="navbar navbar-expand-xxl" id="navsito" >
         <div class="container">
             <!--Logo Duoc -->
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{ url('') }}">
             <img src="img/Logo_duoc.png" width="300" height="70" class="d-inline-block logo-duoc"alt="">
           </a>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,11 +37,11 @@
                 <a id="textMenu1"style="position:relative;right:1px;bottom:30px;"href="#">Consúltanos</a>
             </li>
             <li class="busqueda">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{ url('login')}}">
                 <span style="font-size:50px;">
                    <i class="fi fi-sr-circle-user" id="icon2"></i>
                 </span></a>
-                <a id="textMenu2"style="position:relative;left:1px;bottom:30px;"href="#">Cuenta</a>
+                <a id="textMenu2"style="position:relative;left:1px;bottom:30px;"href="{{ url('login')}}">Cuenta</a>
             </li>
             <li class="busqueda">
               <a class="nav-link" href="#">
@@ -82,6 +82,7 @@
         </ul>
       </nav>
     </header>
+    
 @yield('content')
 @yield('login')
 <script src="js/app.js"></script>
