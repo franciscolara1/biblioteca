@@ -20,7 +20,7 @@ class CreateLibrosTable extends Migration
             $table->string('img');
             $table->longText('descripcion');
             $table->string('editorial');
-            $table->integer('ano');
+            $table->string('ano');
             $table->integer('stock');
             $table->unsignedBigInteger('categoria_id'); // Clave foránea
         
