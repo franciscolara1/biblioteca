@@ -30,6 +30,12 @@
   </div>
 
 </header>
+    <div class="search-bar col-6">
+      <div class="input-group">
+        <input class="form-control"type="search" name="buscar"id="buscar"placeholder="Busque sus libros...">
+        <button class="btn btn-outline-warning" type="button"><i class="bi bi-search"></i></button>
+      </div>
+    </div>
 <section class="container-fluid"id="cards">
   <div class="row">
     <h1 id="titulo-libros">Libros</h1>

@@ -18,7 +18,7 @@ body{
    height: 110px;
    background-color:#002366;
    position: fixed;
-   z-index: 99;  
+   z-index: 97;  
 }
 .navbar-brand::before{
     content: 'Bibliotecas';
@@ -69,4 +69,32 @@ ul > li > a > span > i {
 .busqueda > a > span >i:hover{
     color: #FFD400;
 }
-/*Media queries */
+/*----- CARRUSEL -------*/
+.carousel-control-prev{
+    position: absolute;
+    top:170px;
+}
+.carousel-control-next{
+    position: absolute;
+    top:170px;
+}
+/*---- SEARCH BAR ---- */
+.search-bar{
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    top:70px;
+}
+/* search icon */
+.bi-search{
+    font-size: 30px;
+    position: relative;
+    bottom:4px;
+}
+/* logo duoc */
+.logo-duoc > img{
+    width: 50px;
+    border-radius: 100%;
+    position: absolute;
+    top:95px;
+}

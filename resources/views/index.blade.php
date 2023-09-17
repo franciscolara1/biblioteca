@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="https://www.duoc.cl/wp-content/uploads/2020/03/favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
@@ -48,7 +49,7 @@
                 <span style="font-size:50px;">
                   <i class="fi fi-sr-book-alt" id="icon3"></i>
                 </span></a>
-                <a id="textMenu3"style="position:relative;left:1px;bottom:30px;"href="#">Libros</a>
+                <a id="textMenu3"style="position:relative;left:1px;bottom:30px;"href="#">Prestamos</a>
             </li>
             <li class="busqueda">
               <a class="nav-link" href="#">
@@ -73,6 +74,8 @@
         </div>
       </nav>
       <nav class="menu">
+        <li class="logo-duoc"><img src="img/duoc.jpg" alt=""></li>
+        <li><h1 style="font-size:24px;margin-top:70px;color:white;text-align:center">Catálogo </h1></li>
         <ul class="nav-list">
           <li><a class="d-xxl-none"href="#">Consultanos</a></li>
           <li><a class="d-xxl-none"href="#">Cuenta</a></li>
