@@ -62,9 +62,6 @@
     margin-right: 10px;
     font-size: 16px;
 }
-.nav-list > li:hover{
-    background-color: red;
-}
 /* Media queries */
 @media only screen and (min-width:500px) and (max-width:1750px){
     .menu{
@@ -119,3 +116,31 @@
         
     }
 }
+
+/* ---- sidebar --------*/
+/* logo duoc */
+.logo-duoc > img{
+    width: 50px;
+    border-radius: 100%;
+    position: absolute;
+    top:95px;
+}
+/* ------Side bar Accordion ------ */ 
+.accordion{
+    width: 260px;
+    position: relative;
+    right:10%;
+    --bs-accordion-btn-bg:red;
+    --bs-accordion-active-bg:red;
+    --bs-accordion-border-color:red;
+    --bs-accordion-bg:red;
+    --bs-accordion-btn-focus-box-shadow:none;
+    --bs-accordion-btn-color:white;
+    --bs-accordion-active-color:white;
+}
+.accordion-button{
+    font-size: 16px;
+}
+
+
+

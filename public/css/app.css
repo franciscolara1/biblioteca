@@ -91,10 +91,3 @@ ul > li > a > span > i {
     position: relative;
     bottom:4px;
 }
-/* logo duoc */
-.logo-duoc > img{
-    width: 50px;
-    border-radius: 100%;
-    position: absolute;
-    top:95px;
-}

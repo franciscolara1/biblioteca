@@ -77,6 +77,38 @@
         <li class="logo-duoc"><img src="img/duoc.jpg" alt=""></li>
         <li><h1 style="font-size:24px;margin-top:70px;color:white;text-align:center">Catálogo </h1></li>
         <ul class="nav-list">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Escuelas
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                  <ul class="escuela-list">
+                      <li><a href="#">Escuela de informática</a></li>
+                      <li><a href="#">Escuela de diseño</a></li>
+                      <li><a href="#">Escuela de medicina</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                    Escuelas
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <ul class="escuela-list">
+                        <li><a href="#">Escuela de informática</a></li>
+                        <li><a href="#">Escuela de diseño</a></li>
+                        <li><a href="#">Escuela de medicina</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
           <li><a class="d-xxl-none"href="#">Consultanos</a></li>
           <li><a class="d-xxl-none"href="#">Cuenta</a></li>
           <li><a class="d-xxl-none"href="#">Libros</a></li>
