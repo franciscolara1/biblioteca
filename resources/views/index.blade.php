@@ -121,5 +121,6 @@
 @yield('content')
 @yield('login')
 <script src="js/app.js"></script>
+<script src="js/scroll.js"></script>
 </body>
 </html>

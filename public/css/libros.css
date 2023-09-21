@@ -3,17 +3,92 @@
     margin-top:6%;
     
 }
-.row{
+
+.scrolling-container{
     display:flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items:normal;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     margin-top: 2%;
+    scroll-behavior: smooth;
+}
+.scrolling-container2{
+    display:flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 2%;
+    scroll-behavior: smooth;
+}
+.scrolling-container::-webkit-scrollbar {
+    display: none;
+}
+.scrolling-container2::-webkit-scrollbar {
+    display: none;
+}
+#titulo-libros{
+    margin-left: 5%;
+}
+#titulo-libros2{
+    margin-left: 5%;
+    position: relative;
+    top:50px;
 }
 .card{
-    width: 18rem;
+    flex: 0 0 auto;
+    width: 15rem;
+    height: 22rem;
     margin-top:20px;
+    margin:20px;
+    border-style:hidden;
 }
 .card > img{
     height:330px;
+}
+.arrow-icon-left{
+    font-size:40px;
+    position: absolute;
+    left: -6px;
+    bottom:-7px;
+}
+.button-arrow-left{
+    width:30px;
+    position: absolute;
+    left:40px;
+    bottom:-20px;
+}
+.arrow-icon-right{
+    font-size:40px;
+    position: absolute;
+    right: -6px;
+    bottom:-7px;
+}
+.button-arrow-right{
+    width:30px;
+    position: absolute;
+    right:40px;
+    bottom:-20px;
+}
+/*Section 2 */
+.button-arrow-left2{
+    width:30px;
+    position: relative;
+    left:30px;
+    top:260px
+}
+.arrow-icon-left2{
+    font-size:40px;
+    position: absolute;
+    left: -6px;
+    bottom:-7px;
+}
+.button-arrow-right2{
+    width:30px;
+    position: relative;
+    left:1818px;
+    bottom:250px;
+}
+.arrow-icon-right2{
+    font-size:40px;
+    position: absolute;
+    right: -6px;
+    bottom:-7px;
 }

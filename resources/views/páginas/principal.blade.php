@@ -37,10 +37,11 @@
       </div>
     </div>
 <section class="container-fluid"id="cards">
-  <div class="row"style="margin-left:5%;margin-right:5%">
-    <h1 id="titulo-libros">Libros</h1>
+  <h3 id="titulo-libros">Escuela Informática y Telecomunicaciones.</h3>
+  <button class="btn btn-warning button-arrow-left"><i class="bi bi-chevron-left arrow-icon-left"></i></button>
+  <div class="row scrolling-container"style="margin-left:5%;margin-right:5%">
     @foreach( $libros as $libro)
-    <div class="card">
+    <div class="card text-left">
       <img src="{{ $libro-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{ $libro-> title }}</h5>
@@ -49,5 +50,23 @@
     </div>
     @endforeach
   </div>
+  <button class="btn btn-warning button-arrow-right"><i class="bi bi-chevron-right arrow-icon-right"></i></button>
 </section>
+<div class="container-fluid">
+  <h3 id="titulo-libros2">Escuela Informática y Telecomunicaciones.</h3>
+  <button class="btn btn-warning button-arrow-left2"><i class="bi bi-chevron-left arrow-icon-left2"></i></button>
+  <div class="row scrolling-container2"style="margin-left:5%;margin-right:5%">
+    @foreach( $libros as $libro)
+    <div class="card text-left">
+      <img src="{{ $libro-> img }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ $libro-> title }}</h5>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    @endforeach
+  </div>
+  <button class="btn btn-warning button-arrow-right2"><i class="bi bi-chevron-right arrow-icon-right2"></i></button>
+</div>
+
 @endsection
