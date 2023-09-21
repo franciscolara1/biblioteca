@@ -33,7 +33,10 @@
     transform: translateX(0px);
     width: 340px;
     right:0px;
-    overflow: hidden;
+    
+}
+.visible::-webkit-scrollbar {
+    display: none;
 }
 .nav-list{
     flex-direction: column;
@@ -129,18 +132,51 @@
 .accordion{
     width: 260px;
     position: relative;
-    right:10%;
-    --bs-accordion-btn-bg:red;
-    --bs-accordion-active-bg:red;
-    --bs-accordion-border-color:red;
-    --bs-accordion-bg:red;
+    bottom:40px;
+    right:15%;
+    --bs-accordion-btn-bg: #002366;
+    --bs-accordion-active-bg:#0137A2;
+    --bs-accordion-border-color:#002366;
+    --bs-accordion-bg:#002366;
     --bs-accordion-btn-focus-box-shadow:none;
-    --bs-accordion-btn-color:white;
-    --bs-accordion-active-color:white;
+    --bs-accordion-btn-color:#FFD400;
+    --bs-accordion-active-color:#FFD400;
+    --bs-accordion-icon-color:white;
 }
 .accordion-button{
-    font-size: 16px;
+    font-size: 17px;
+    font-weight:600;
 }
-
-
+.accordion-button::after{
+    
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-caret-down' viewBox='0 0 16 16'%3E%3Cpath d='M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z'/%3E%3C/svg%3E");
+}
+.accordion-button:not(.collapse)::after{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-caret-up' viewBox='0 0 16 16'%3E%3Cpath d='M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z'/%3E%3C/svg%3E");
+}
+.escuela-list{
+    list-style: none;
+    position: relative;
+    bottom:20px;
+    right:40px;
+    text-align:initial;
+}
+.escuela-list > li{
+    margin-top:20px;
+    width: 240px;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    border-top-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+.escuela-list > li:hover{
+    background-color:#0137A2;
+}
+.escuela-list > li > a {
+    text-decoration: none;
+    color:white;
+}
+.escuela-list > li > a:hover{
+    color:#FFD400;
+}
 

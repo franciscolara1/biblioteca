@@ -80,31 +80,44 @@
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                   Escuelas
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show">
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
                   <ul class="escuela-list">
-                      <li><a href="#">Escuela de informática</a></li>
+                      <li><a href="#">Escuela de informática y Telecomunicaciones</a></li>
                       <li><a href="#">Escuela de diseño</a></li>
-                      <li><a href="#">Escuela de medicina</a></li>
+                      <li><a href="#">Escuela de Administración y Negocios</a></li>
+                      <li><a href="#">Escuela de Comunicación</a></li>
+                      <li><a href="#">Escuela de Construcción</a></li>
+                      <li><a href="#">Escuela de Ingeniería</a></li>
+                      <li><a href="#">Escuela de Turismo</a></li>
+                      <li><a href="#">Escuela de Salud</a></li>
+                      <li><a href="#">Escuela de Recursos naturales</a></li>
                   </ul>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
-                    Escuelas
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                    Otros
                   </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse">
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
                   <div class="accordion-body">
                     <ul class="escuela-list">
-                        <li><a href="#">Escuela de informática</a></li>
-                        <li><a href="#">Escuela de diseño</a></li>
-                        <li><a href="#">Escuela de medicina</a></li>
+                        <li><a href="#">Ficción</a></li>
+                        <li><a href="#">Infantiles</a></li>
+                        <li><a href="#">Humanidades</a></li>
+                        <li><a href="#">Literatura</a></li>
+                        <li><a href="#">Historia</a></li>
+                        <li><a href="#">Biografia</a></li>
+                        <li><a href="#">Estilo de vida,deportes y ocio</a></li>
+                        <li><a href="#">Novelas</a></li>
+                        <li><a href="#">Cuentos</a></li>
+                        <li><a href="#">Terror</a></li>                       
                     </ul>
                   </div>
                 </div>
