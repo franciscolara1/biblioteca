@@ -35,7 +35,7 @@
 
 <footer id="custom-footer" class="">
     <div>
-        <div>@pico pal que lee</div>
+        <div>footer</div>
     </div>
 </footer>
 

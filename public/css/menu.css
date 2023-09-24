@@ -85,7 +85,16 @@
     .visible{
         visibility:visible;
         right:0px;
-        width: 230px;
+        width: 300px;
+    }
+    .nav-list{
+        flex-direction: column;
+        list-style-type: none;
+        display:flex;
+        align-items:end;
+        position: relative;
+        left:20px;
+        top:70px;
     }
 }
 @media only screen and (min-width:100px) and (max-width:500px){
@@ -102,8 +111,9 @@
         transition: all 160ms ease-in-out;
         -webkit-transition: all 160ms ease-in-out;
         width: 0px;
-        overflow: hidden;
-        overflow-y: auto;
+    }
+    .menu > .logo-duoc{
+        display:none;
     }
     .visible{
         visibility: visible;
@@ -117,6 +127,17 @@
         height: 40px;
         z-index: 99;
         
+    }
+    .nav-list{
+        flex-direction:column;
+        list-style-type: none;
+        display:flex;
+        align-items:center;
+        text-align: left;
+        position: relative;
+        left:70px;
+        top:70px;
+        font-size: 10px;
     }
 }
 

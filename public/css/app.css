@@ -78,6 +78,11 @@ ul > li > a > span > i {
     position: absolute;
     top:170px;
 }
+@media only screen and (min-width:1000px) and (max-width:1600px) {
+    .carousel-inner > .carousel-item > img {
+        width:20px;
+    }
+}
 /*---- SEARCH BAR ---- */
 .search-bar{
     margin-left: auto;

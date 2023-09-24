@@ -2,7 +2,7 @@
 
 @section('content')
 <header style="margin-top:93px">
-  <div id="carouselExampleIndicators" class="carousel slide">
+  <div id="carouselExampleIndicators" class="carousel slide" style="max-width:100%;">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -10,13 +10,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/carrusel/banner podcast.jpg" class="d-block w-100" alt="...">
+        <img src="img/carrusel/banner podcast.jpg" class="d-block w-100" alt="..." style="max-width:100%;height:auto;">
       </div>
       <div class="carousel-item">
-        <img src="img/carrusel/banner vida estudiantil.jpg" class="d-block w-100" alt="...">
+        <img src="img/carrusel/banner vida estudiantil.jpg" class="d-block w-100" alt="..." style="max-width:100%;height:auto;">
       </div>
       <div class="carousel-item">
-        <img src="img/carrusel/concurso cuentos.jpg" class="d-block w-100" alt="...">
+        <img src="img/carrusel/concurso cuentos.jpg" class="d-block w-100" alt="..." style="max-width:100%;height:auto;">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

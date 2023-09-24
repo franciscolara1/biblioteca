@@ -82,9 +82,9 @@
 }
 .button-arrow-right2{
     width:30px;
-    position: relative;
-    left:1818px;
-    bottom:250px;
+    position: absolute;
+    right:20px;
+    bottom:-530px;
 }
 .arrow-icon-right2{
     font-size:40px;
