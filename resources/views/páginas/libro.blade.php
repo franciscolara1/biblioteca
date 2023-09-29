@@ -2,8 +2,8 @@
 
 
 @section('libro')
-
-<div class="container libro-estilo">
+<h1 style="margin-top:12%;">Escuela de Informática y Telecomunicaciones</h1>
+<section class="container-fluid libro-estilo col-12">
     @foreach( $libros as $libro)
         <div class="card text-left">
           <img src="{{ $libro-> img }}" class="card-img-top" alt="...">
@@ -13,6 +13,6 @@
           </div>
         </div>
     @endforeach
-</div>
+</section>
 
 @endsection

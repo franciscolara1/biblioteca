@@ -1,4 +1,7 @@
 .libro-estilo{
-    display:flex;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-wrap:wrap;
+    position: absolute;
+    left:3%;
+    top:35%;
 }
