@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibrosController;
+use App\Http\Controllers\FiltrosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +24,7 @@ Route::get('/' , [LibrosController::class, 'mostrarResultados']);
 Route::get('/login', function () {
     return view('páginas.login');
 });
-Route::get('/libro', function () {
-    return view('páginas.libro');
-});
+Route::get('/libro', [FiltrosController::class, 'filtro']);
 
 
 

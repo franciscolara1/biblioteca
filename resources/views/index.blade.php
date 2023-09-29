@@ -14,6 +14,7 @@
     <link href="css/login.css" rel="stylesheet">
     <link href="css/menu.css" rel="stylesheet">
     <link href="css/libros.css" rel="stylesheet">
+    <link href="css/filtros.css" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,7 +88,7 @@
               <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
                   <ul class="escuela-list">
-                      <li><a href="#">Escuela de informática y Telecomunicaciones</a></li>
+                      <li><a href="{{ url('libro') }}">Escuela de informática y Telecomunicaciones</a></li>
                       <li><a href="#">Escuela de diseño</a></li>
                       <li><a href="#">Escuela de Administración y Negocios</a></li>
                       <li><a href="#">Escuela de Comunicación</a></li>
