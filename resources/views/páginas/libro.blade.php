@@ -3,6 +3,6 @@
 
 @section('libro')
 
-<h1>Acá iran todos los libros</h1>
+<h1 style="margin-top:10%;">Acá iran todos los libros</h1>
 
 @endsection

@@ -45,11 +45,11 @@
                 <a id="textMenu2"style="position:relative;left:1px;bottom:30px;"href="{{ url('login')}}">Cuenta</a>
             </li>
             <li class="busqueda">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{ url('libro')}}">
                 <span style="font-size:50px;">
                   <i class="fi fi-sr-book-alt" id="icon3"></i>
                 </span></a>
-                <a id="textMenu3"style="position:relative;left:1px;bottom:30px;"href="#">Prestamos</a>
+                <a id="textMenu3"style="position:relative;left:1px;bottom:30px;"href="{{ url('libro')}}">Prestamos</a>
             </li>
             <li class="busqueda">
               <a class="nav-link" href="#">
@@ -133,6 +133,7 @@
     
 @yield('content')
 @yield('login')
+@yield('libro')
 <script src="js/app.js"></script>
 <script src="js/scroll.js"></script>
 </body>

@@ -18,10 +18,13 @@ Route::get('/', function () {
     return view('páginas.principal');
 });
 */
-Route::get('/' , [LibrosController::class, 'index'])->name('libros');
+Route::get('/' , [LibrosController::class, 'mostrarResultados']);
 /* Login */
 Route::get('/login', function () {
     return view('páginas.login');
+});
+Route::get('/libro', function () {
+    return view('páginas.libro');
 });
 
 

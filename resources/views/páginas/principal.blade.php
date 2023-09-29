@@ -40,27 +40,43 @@
   <h3 id="titulo-libros">Escuela Informática y Telecomunicaciones.</h3>
   <button class="btn btn-warning button-arrow-left"><i class="bi bi-chevron-left arrow-icon-left"></i></button>
   <div class="row scrolling-container"style="margin-left:5%;margin-right:5%">
-    @foreach( $libros as $libro)
+        @foreach( $informatica as $libro)
+        <div class="card text-left">
+          <img src="{{ $libro-> img }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ $libro-> title }}</h5>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        @endforeach
+  </div>
+  <button class="btn btn-warning button-arrow-right"><i class="bi bi-chevron-right arrow-icon-right"></i></button>
+</section>
+<div class="container-fluid">
+  <h3 id="titulo-libros2">Escuela de Turismo.</h3>
+  <button class="btn btn-warning button-arrow-left2"><i class="bi bi-chevron-left arrow-icon-left2"></i></button>
+  <div class="row scrolling-container2"style="margin-left:5%;margin-right:5%">
+    @foreach( $turismo as $libroTurismo)
     <div class="card text-left">
-      <img src="{{ $libro-> img }}" class="card-img-top" alt="...">
+      <img src="{{ $libroTurismo-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ $libro-> title }}</h5>
+        <h5 class="card-title">{{ $libroTurismo-> title }}</h5>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
     @endforeach
   </div>
-  <button class="btn btn-warning button-arrow-right"><i class="bi bi-chevron-right arrow-icon-right"></i></button>
-</section>
+  <button class="btn btn-warning button-arrow-right2"><i class="bi bi-chevron-right arrow-icon-right2"></i></button>
+</div>
 <div class="container-fluid">
-  <h3 id="titulo-libros2">Escuela Informática y Telecomunicaciones.</h3>
+  <h3 id="titulo-libros2">Literatura.</h3>
   <button class="btn btn-warning button-arrow-left2"><i class="bi bi-chevron-left arrow-icon-left2"></i></button>
   <div class="row scrolling-container2"style="margin-left:5%;margin-right:5%">
-    @foreach( $libros as $libro)
+    @foreach( $literatura as $libroLiteratura)
     <div class="card text-left">
-      <img src="{{ $libro-> img }}" class="card-img-top" alt="...">
+      <img src="{{ $libroLiteratura-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ $libro-> title }}</h5>
+        <h5 class="card-title">{{ $libroLiteratura-> title }}</h5>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>

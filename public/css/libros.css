@@ -41,7 +41,11 @@
     border-style:hidden;
 }
 .card > img{
-    height:330px;
+    height:33rem;
+}
+.card-img-top{
+    width:200px;
+    height:30px;
 }
 .arrow-icon-left{
     font-size:40px;
