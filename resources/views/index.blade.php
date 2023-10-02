@@ -10,11 +10,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- CSS -->
-    <link href="css/filtros.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
-    <link href="css/login.css" rel="stylesheet">
-    <link href="css/menu.css" rel="stylesheet">
-    <link href="css/libros.css" rel="stylesheet">
+    <link href="{{ asset('css/filtros.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/menu.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/libros.css') }}" rel="stylesheet">
     
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <!-- Google Fonts -->
@@ -28,7 +28,7 @@
         <div class="container">
             <!--Logo Duoc -->
           <a class="navbar-brand" href="{{ url('') }}">
-            <img src="img/Logo_duoc.png" width="300" height="70" class="d-inline-block logo-duoc"alt="">
+            <img src="{{ url('img/Logo_duoc.png') }}" width="300" height="70" class="d-inline-block logo-duoc"alt="">
           </a>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
@@ -89,13 +89,13 @@
               <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
                   <ul class="escuela-list">
-                      <li><a href="{{ url('libro') }}">Escuela de informática y Telecomunicaciones</a></li>
+                      <li><a href="{{ url('libro' , ['categoria_id' => 1]) }}">Escuela de informática y Telecomunicaciones</a></li>
                       <li><a href="#">Escuela de diseño</a></li>
                       <li><a href="#">Escuela de Administración y Negocios</a></li>
                       <li><a href="#">Escuela de Comunicación</a></li>
                       <li><a href="#">Escuela de Construcción</a></li>
                       <li><a href="#">Escuela de Ingeniería</a></li>
-                      <li><a href="#">Escuela de Turismo</a></li>
+                      <li><a href="{{ url('libro' , ['categoria_id' => 7]) }}">Escuela de Turismo</a></li>
                       <li><a href="#">Escuela de Salud</a></li>
                       <li><a href="#">Escuela de Recursos naturales</a></li>
                   </ul>
@@ -136,7 +136,7 @@
 @yield('content')
 @yield('login')
 @yield('libro')
-<script src="js/app.js"></script>
-<script src="js/scroll.js"></script>
+<script src="{{ url('js/app.js') }}"></script>
+<script src="{{ url('js/scroll.js') }}"></script>
 </body>
 </html>

@@ -24,7 +24,7 @@ Route::get('/' , [LibrosController::class, 'mostrarResultados']);
 Route::get('/login', function () {
     return view('páginas.login');
 });
-Route::get('/libro', [FiltrosController::class, 'filtro']);
+Route::get('/libro/{categoria_id}', [FiltrosController::class, 'filtro']);
 
 
 
