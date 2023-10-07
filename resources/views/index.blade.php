@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <link rel="icon" type="image/vnd.microsoft.icon" href="https://www.duoc.cl/wp-content/uploads/2020/03/favicon.ico">
     <meta charset="utf-8">
@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200;400&display=swap" rel="stylesheet">
 </head>
-<body class="bg-light">
+<body style ="background-color:beige;">
     <header>
       <nav class="navbar navbar-expand-xxl" id="navsito" >
         <div class="container">

@@ -2,7 +2,7 @@
 
 @section('content')
 <header style="margin-top:93px">
-  <div id="carouselExampleIndicators" class="carousel slide" style="max-width:100%;">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="max-width:100%;">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -42,10 +42,10 @@
   <div class="row scrolling-container"style="margin-left:5%;margin-right:5%">
         @foreach( $informatica as $libro)
         <div class="card text-left">
-          <img src="{{ $libro-> img }}" class="card-img-top" alt="...">
+          <img src="{{ $libro-> img }}" class="card-img-top img-card" alt="...">
           <div class="card-body">
-            <h5 class="card-title">{{ $libro-> title }}</h5>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">{{ $libro-> titulo }}</h5>
+            <a href="#" class="btn btn-sm btn-block" id="button-card">Reservar</a>
           </div>
         </div>
         @endforeach
@@ -60,8 +60,8 @@
     <div class="card text-left">
       <img src="{{ $libroTurismo-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ $libroTurismo-> title }}</h5>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">{{ $libroTurismo-> titulo }}</h5>
+        <a href="#" class="btn btn-primary"id="button-card">Reservar</a>
       </div>
     </div>
     @endforeach
@@ -76,8 +76,8 @@
     <div class="card text-left">
       <img src="{{ $libroLiteratura-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ $libroLiteratura-> title }}</h5>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">{{ $libroLiteratura-> titulo }}</h5>
+        <a href="#" class="btn btn-primary"id="button-card">Reservar</a>
       </div>
     </div>
     @endforeach
