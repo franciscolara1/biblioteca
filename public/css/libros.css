@@ -83,7 +83,7 @@
     width:30px;
     position: absolute;
     left:40px;
-    bottom:-20px;
+    bottom:-1rem;
 }
 .arrow-icon-right{
     font-size:40px;
@@ -95,14 +95,14 @@
     width:30px;
     position: absolute;
     right:40px;
-    bottom:-20px;
+    bottom:-1rem;
 }
 /*Section 2 */
 .button-arrow-left2{
     width:30px;
     position: relative;
     left:30px;
-    top:260px
+    top:15rem;
 }
 .arrow-icon-left2{
     font-size:40px;
@@ -113,10 +113,110 @@
 .button-arrow-right2{
     width:30px;
     position: absolute;
-    right:20px;
-    bottom:-530px;
+    right:3rem;
+    top:88rem;
 }
 .arrow-icon-right2{
+    font-size:40px;
+    position: absolute;
+    right: -6px;
+    bottom:-7px;
+}
+/* Section 3 */
+.button-arrow-left3{
+    width:30px;
+    position: relative;
+    left:30px;
+    top:15rem;
+}
+.arrow-icon-left3{
+    font-size:40px;
+    position: absolute;
+    left: -6px;
+    bottom:-7px;
+}
+.button-arrow-right3{
+    width:30px;
+    position: absolute;
+    right:3rem;
+    top:118rem;
+}
+.arrow-icon-right3{
+    font-size:40px;
+    position: absolute;
+    right: -6px;
+    bottom:-7px;
+}
+/* Section 4 */
+.button-arrow-left4{
+    width:30px;
+    position: relative;
+    left:30px;
+    top:15rem;
+}
+.arrow-icon-left4{
+    font-size:40px;
+    position: absolute;
+    left: -6px;
+    bottom:-7px;
+}
+.button-arrow-right4{
+    width:30px;
+    position: absolute;
+    right:3rem;
+    top:148rem;
+}
+.arrow-icon-right4{
+    font-size:40px;
+    position: absolute;
+    right: -6px;
+    bottom:-7px;
+}
+/* Section 5 */
+.button-arrow-left5{
+    width:30px;
+    position: relative;
+    left:30px;
+    top:15rem;
+}
+.arrow-icon-left5{
+    font-size:40px;
+    position: absolute;
+    left: -6px;
+    bottom:-7px;
+}
+.button-arrow-right5{
+    width:30px;
+    position: absolute;
+    right:3rem;
+    top:179rem;
+}
+.arrow-icon-right5{
+    font-size:40px;
+    position: absolute;
+    right: -6px;
+    bottom:-7px;
+}
+/* Section 6 */
+.button-arrow-left6{
+    width:30px;
+    position: relative;
+    left:30px;
+    top:15rem;
+}
+.arrow-icon-left6{
+    font-size:40px;
+    position: absolute;
+    left: -6px;
+    bottom:-7px;
+}
+.button-arrow-right6{
+    width:30px;
+    position: absolute;
+    right:3rem;
+    top:209rem;
+}
+.arrow-icon-right6{
     font-size:40px;
     position: absolute;
     right: -6px;

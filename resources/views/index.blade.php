@@ -90,7 +90,7 @@
                 <div class="accordion-body">
                   <ul class="escuela-list">
                       <li><a href="{{ url('libro' , ['categoria_id' => 1]) }}">Escuela de informática y Telecomunicaciones</a></li>
-                      <li><a href="#">Escuela de diseño</a></li>
+                      <li><a href="{{ url('libro' , ['categoria_id' => 2]) }}">Escuela de diseño</a></li>
                       <li><a href="#">Escuela de Administración y Negocios</a></li>
                       <li><a href="#">Escuela de Comunicación</a></li>
                       <li><a href="#">Escuela de Construcción</a></li>
@@ -113,9 +113,9 @@
                         <li><a href="#">Ficción</a></li>
                         <li><a href="#">Infantiles</a></li>
                         <li><a href="#">Humanidades</a></li>
-                        <li><a href="#">Literatura</a></li>
-                        <li><a href="#">Historia</a></li>
-                        <li><a href="#">Biografia</a></li>
+                        <li><a href="{{ url('libro' , ['categoria_id' => 13]) }}">Literatura</a></li>
+                        <li><a href="{{ url('libro' , ['categoria_id' => 14]) }}">Historia</a></li>
+                        <li><a href="{{ url('libro' , ['categoria_id' => 15]) }}">Biografia</a></li>
                         <li><a href="#">Estilo de vida,deportes y ocio</a></li>
                         <li><a href="#">Novelas</a></li>
                         <li><a href="#">Cuentos</a></li>
