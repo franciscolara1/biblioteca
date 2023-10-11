@@ -26,5 +26,8 @@ Route::get('/login', function () {
 });
 Route::get('/libro/{categoria_id}', [FiltrosController::class, 'filtro']);
 
+Route::get('/libro', [FiltrosController::class,'busqueda'])->name('libro');
+
+
 
 

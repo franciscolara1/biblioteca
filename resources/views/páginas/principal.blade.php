@@ -31,10 +31,12 @@
 
 </header>
     <div class="search-bar col-6">
-      <div class="input-group">
-        <input class="form-control"type="search" name="buscar"id="buscar"placeholder="Busque sus libros...">
-        <button class="btn btn-warning" type="button"><i class="bi bi-search"></i></button>
-      </div>
+      <form action="{{ route('libro')}}" method="get">
+        <div class="input-group">
+          <input class="form-control"type="search" name="texto"id="buscar"placeholder="Busque sus libros...">
+          <button class="btn btn-warning" type="submit"value="buscar"><i class="bi bi-search"></i></button>
+        </div>
+      </form>
     </div>
     <!-- ********** SECCIÓN 1 ********** -->
 <section class="container-fluid"id="cards">

@@ -23,18 +23,19 @@ class FiltrosController extends Controller
         // Pasar los datos a la vista
         return view('páginas.libro', compact('libros', 'nombreCategoria'));
     }
-    /*
+    
     //Código para realizar la búsqueda de los libros por palabra clave.
     public function busqueda(Request $request){
-
-        $texto=trim($request->get('texto));
+        
+        $texto=trim($request->get('texto'));
+        $nombreCategoria = 'Resultados de búsqueda: '.$texto;
         $libros=DB::table('libros')
-                 ->select('nombre','img')
-                 ->where('nombre','LIKE','%'.$texto.'%')
-                 ->orWhere(')
-                 ->orderBy('nombre','asc)
-        return view('páginas.libro');
+                 ->select('titulo','img',)
+                 ->where('titulo','LIKE','%'.$texto.'%')
+                 ->orderBy('titulo','asc')
+                 ->get();
+        return view('páginas.libro',compact('libros', 'nombreCategoria'));
     }
-    */
+    
     
 }
