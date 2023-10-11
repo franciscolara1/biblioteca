@@ -42,10 +42,10 @@
   <button class="btn btn-warning button-arrow-left"><i class="bi bi-chevron-left arrow-icon-left"></i></button>
   <div class="row scrolling-container"style="margin-left:5%;margin-right:5%">
         @foreach( $informatica as $libro)
-        <div class="card text-left">
+        <div class="card text-left carta">
           <img src="{{ $libro-> img }}" class="card-img-top img-card" alt="...">
           <div class="card-body">
-            <h5 class="card-title">{{ $libro-> titulo }}</h5>
+            <h5 class="card-title texto">{{ $libro-> titulo }}</h5>
             <a href="#" class="btn btn-sm btn-block" id="button-card">Reservar</a>
           </div>
         </div>
@@ -59,10 +59,10 @@
   <button class="btn btn-warning button-arrow-left2"><i class="bi bi-chevron-left arrow-icon-left2"></i></button>
   <div class="row scrolling-container2"style="margin-left:5%;margin-right:5%">
     @foreach( $turismo as $libroTurismo)
-    <div class="card text-left">
+    <div class="card text-left carta">
       <img src="{{ $libroTurismo-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ $libroTurismo-> titulo }}</h5>
+        <h5 class="card-title texto">{{ $libroTurismo-> titulo }}</h5>
         <a href="#" class="btn btn-primary"id="button-card">Reservar</a>
       </div>
     </div>
@@ -76,10 +76,10 @@
   <button class="btn btn-warning button-arrow-left3"><i class="bi bi-chevron-left arrow-icon-left3"></i></button>
   <div class="row scrolling-container2"style="margin-left:5%;margin-right:5%">
     @foreach( $literatura as $libroLiteratura)
-    <div class="card text-left">
+    <div class="card text-left carta">
       <img src="{{ $libroLiteratura-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ $libroLiteratura-> titulo }}</h5>
+        <h5 class="card-title texto">{{ $libroLiteratura-> titulo }}</h5>
         <a href="#" class="btn btn-primary"id="button-card">Reservar</a>
       </div>
     </div>
@@ -93,10 +93,10 @@
   <button class="btn btn-warning button-arrow-left4"><i class="bi bi-chevron-left arrow-icon-left2"></i></button>
   <div class="row scrolling-container2"style="margin-left:5%;margin-right:5%">
     @foreach( $historia as $libroHistoria)
-    <div class="card text-left">
+    <div class="card text-left carta">
       <img src="{{ $libroHistoria-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ $libroHistoria-> titulo }}</h5>
+        <h5 class="card-title texto">{{ $libroHistoria-> titulo }}</h5>
         <a href="#" class="btn btn-primary"id="button-card">Reservar</a>
       </div>
     </div>
@@ -110,10 +110,10 @@
   <button class="btn btn-warning button-arrow-left5"><i class="bi bi-chevron-left arrow-icon-left5"></i></button>
   <div class="row scrolling-container2"style="margin-left:5%;margin-right:5%">
     @foreach( $biografia as $libroBiografia)
-    <div class="card text-left">
+    <div class="card text-left carta">
       <img src="{{ $libroBiografia-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ $libroBiografia-> titulo }}</h5>
+        <h5 class="card-title texto">{{ $libroBiografia-> titulo }}</h5>
         <a href="#" class="btn btn-primary"id="button-card">Reservar</a>
       </div>
     </div>
@@ -127,10 +127,10 @@
   <button class="btn btn-warning button-arrow-left6"><i class="bi bi-chevron-left arrow-icon-left6"></i></button>
   <div class="row scrolling-container2"style="margin-left:5%;margin-right:5%">
     @foreach( $diseño as $libroDiseño)
-    <div class="card text-left">
+    <div class="card text-left  carta">
       <img src="{{ $libroDiseño-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ $libroDiseño-> titulo }}</h5>
+        <h5 class="card-title texto">{{ $libroDiseño-> titulo }}</h5>
         <a href="#" class="btn btn-primary"id="button-card">Reservar</a>
       </div>
     </div>

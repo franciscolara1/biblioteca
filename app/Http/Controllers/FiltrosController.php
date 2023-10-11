@@ -24,7 +24,7 @@ class FiltrosController extends Controller
         return view('páginas.libro', compact('libros', 'nombreCategoria'));
     }
     /*
-    //Código para realizar la búsqueda de los libros.
+    //Código para realizar la búsqueda de los libros por palabra clave.
     public function busqueda(Request $request){
 
         $texto=trim($request->get('texto));

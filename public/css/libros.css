@@ -32,7 +32,7 @@
     position: relative;
     top:50px;
 }
-.card{
+.carta{
     flex: 0 0 auto;
     width: 12rem;
     height: 20rem;
@@ -51,7 +51,7 @@
     right: 12px;
     border-radius: 0;
 }
-.card-title{
+.texto{
     font-size: 16px;
     text-align: left;
     position: relative;

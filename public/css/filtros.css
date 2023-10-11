@@ -1,7 +1,47 @@
+.carta-libro{
+    flex: 0 0 auto;
+    width: 12rem;
+    height: 20rem;
+    margin-top:20px;
+    margin:20px;
+    margin-right:30px;
+    border-style:hidden;
+    border-radius: 0;
+    background-color:lightslategrey;
+}
 .libro-estilo{
     display: flex;
     flex-wrap:wrap;
     position: absolute;
     left:3%;
     top:35%;
+}
+#card-ligro-pag{
+    width:12rem;
+    height:1rem;
+    position:absolute;
+    right: 1px;
+    border-radius: 0;
+}
+.texto-libros{
+    font-size: 16px;
+    text-align: left;
+    position: relative;
+    right:8px;
+    bottom:10px;
+    width:180px;
+    color:aliceblue;
+}
+#boton-libro{
+    width:190px;
+    position: absolute;
+    right: 1px;
+    bottom:0px;
+    border-color: black;
+    background-color: #002366;
+    color:white;
+}
+#boton-libro:hover{
+    background-color:#FFD400;
+    color:#002366;
 }
