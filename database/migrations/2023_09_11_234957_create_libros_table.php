@@ -21,7 +21,6 @@ class CreateLibrosTable extends Migration
             $table->longText('descripcion');
             $table->string('editorial');
             $table->string('ano');
-            $table->integer('stock');
             $table->unsignedBigInteger('categoria_id'); // Clave foránea
         
             // Definir la clave foránea
