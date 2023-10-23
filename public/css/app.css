@@ -120,7 +120,7 @@ ul > li > a > span > i {
     bottom:4px;
 }
 
-.footerpenca{
+.footer{
     padding: auto;
     background-color: #002366;
     background-repeat: no-repeat;
@@ -130,14 +130,14 @@ ul > li > a > span > i {
     text-align: center;
 }
 
-.footerpenca h3 {
+.footer h3 {
     color: white;
     text-decoration: none;
     font-size: 1rem;
     padding: 2rem;
     flex-direction: column;
 }
-.footerpenca a {
+.footer a {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
@@ -146,14 +146,14 @@ ul > li > a > span > i {
 }
 
 
-.footerpenca img {
+.footer img {
     width: 361px;
     height: 46PX;
     flex-direction: row;
    
 }
 
-.footerpenca  a:hover {
+.footer  a:hover {
     color: var(--primario)
 }
 
@@ -203,32 +203,9 @@ div {
 .text-center {
     text-align: center;
 }
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
-}
-h1, h2, h3 {
-    line-height: normal;
-}
-.h2, h2 {
-    font-size: 30px;
-}
-.h1, .h2, .h3, h1, h2, h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.1;
-    color: inherit;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-h2 {
+
+
+.siguenos {
     display: block;
     font-size: 1.5em;
     margin-block-start: 0.83em;
@@ -239,20 +216,14 @@ h2 {
 }
 
 #rrss {
-    z-index: 99;
+    z-index: 1;
     position: relative;
     overflow: hidden;
     background: #002366;
     border-bottom: 1px solid rgb(255, 184, 0);
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-    display: block;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
+
 
 section {
     display: block;
@@ -267,12 +238,4 @@ section {
     flex-direction: row;
     
 }
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-user agent stylesheet
-div {
-    display: block;
-}
+

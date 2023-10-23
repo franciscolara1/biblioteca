@@ -153,10 +153,10 @@
       </div>
   </div>
 </div>
-<div class="row" id="home-social" bis_skin_checked="1">
+<div class="row" id="home-social"bis_skin_checked="1">
   <section id="rrss" class="">
     <div class="container" bis_skin_checked="1">
-      <h2 class="text-center">Síguenos en Redes Sociales</h2>
+      <h2 class="text-center siguenos">Síguenos en Redes Sociales</h2>
       <div class="rrss-section" bis_skin_checked="1">
       <div class="card-body flex-column" bis_skin_checked="1">
         <h3 class="text-center">Entérate de todas las novedades y contáctanos para poder ayudarte.</h3> 
@@ -172,7 +172,7 @@
     
     </section>
 </div>
-<footer class="footerpenca">
+<footer class="footer">
   <div>
     <a href="https://www.duoc.cl/contacto/">Contáctanos</a>
     <a href="">(+56) 2 2999 3862</a>
