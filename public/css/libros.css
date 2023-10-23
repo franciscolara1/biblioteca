@@ -60,6 +60,11 @@
     width:180px;
     color:aliceblue;
 }
+/* ------ NEWSLETTERS ----------- */
+.newsletter{
+    background-color: #002366;
+    height: 16rem;
+}
 #button-card{
     width:190px;
     position: absolute;
