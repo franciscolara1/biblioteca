@@ -201,3 +201,33 @@
     color:#FFD400;
 }
 
+.sidenavbar {
+    flex-direction: column;
+    padding: auto;
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.sidenavstyle {
+    text-decoration: none;
+    color:white;
+}
