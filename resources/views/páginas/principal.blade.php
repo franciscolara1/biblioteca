@@ -140,5 +140,18 @@
   </div>
   <button class="btn btn-warning button-arrow-right6"><i class="bi bi-chevron-right arrow-icon-right6"></i></button>
 </div>
+<div class="newsletter mt-5" style="text-align:center;">
+      <div class="container col-xl-4 col-lg-6 col-md-8 col-sm-12">
+        <form action="#" method="post"style="position:relative;top:4rem;">
+          <h5 style="color:whitesmoke;">Suscríbete y recibe información</h5>
+          <label style="color:antiquewhite;position:relative;right:12rem;margin-bottom:4px">Dirección de correo electrónico</label><!-- AJUSTAR -->
+          <div class="input-group">
+            <input type="email" class="form-control" id="input-email" placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" aria-describedby="button-addon2">
+            <button class="btn btn-outline-warning" type="button" id="button-addon2">Suscribirme</button>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
 
 @endsection

@@ -95,3 +95,8 @@ ul > li > a > span > i {
     position: relative;
     bottom:4px;
 }
+/* ------ NEWSLETTERS ----------- */
+.newsletter{
+    background-color: #002366;
+    height: 16rem;
+}

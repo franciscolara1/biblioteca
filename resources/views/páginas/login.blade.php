@@ -24,7 +24,7 @@
                         <div><a href="#">¿Olvidó su contraseña?</a></div>
                     </div>
                     <div class="pb-2">
-                        <button type="submit" class="btn btn-dark w-100 font-weight-bold mt-2">Iniciar sesion</button>
+                        <button type="submit" class="btn btn-dark w-100 font-weight-bold mt-2 boton-inicio-sesion">Iniciar sesion</button>
                     </div>
                 </form>
                 
