@@ -140,6 +140,9 @@
   </div>
   <button class="btn btn-warning button-arrow-right6"><i class="bi bi-chevron-right arrow-icon-right6"></i></button>
 </div>
+
+<!-- ********** NEWSLETTERS ********** -->
+
 <div class="newsletter mt-5 mb-5" style="text-align:center;">
       <div class="container col-xl-4 col-lg-6 col-md-8 col-sm-12">
         <form action="#" method="post"style="position:relative;top:4rem;">
@@ -153,6 +156,9 @@
       </div>
   </div>
 </div>
+
+<!-- ********** RRSS ********** -->
+
 <div class="row" id="home-social"bis_skin_checked="1">
   <section id="rrss" class="">
     <div class="container" bis_skin_checked="1">
