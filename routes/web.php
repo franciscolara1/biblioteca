@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibrosController;
 use App\Http\Controllers\FiltrosController;
+use App\Http\Controllers\AgregarSubscriptorController;
 
 /*
 |--------------------------------------------------------------------------
