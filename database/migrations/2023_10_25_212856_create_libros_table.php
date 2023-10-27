@@ -16,17 +16,15 @@ class CreateLibrosTable extends Migration
         Schema::create('libros', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->unsignedBigInteger('autor_id'); // Clave foránea
+            $table->string('autor');
             $table->string('img');
             $table->longText('descripcion');
-            $table->unsignedBigInteger('editorial_id'); // Clave foránea
+            $table->string('editorial');
             $table->string('ano');
             $table->unsignedBigInteger('categoria_id'); // Clave foránea
         
             // Definir la clave foránea
             $table->foreign('categoria_id')->references('id')->on('categorias');
-            $table->foreign('autor_id')->references('id')->on('autores');
-            $table->foreign('editorial_id')->references('id')->on('editoriales');
         });
         
     }
