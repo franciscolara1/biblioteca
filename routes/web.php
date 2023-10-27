@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibrosController;
 use App\Http\Controllers\FiltrosController;
-use App\Http\Controllers\AgregarSubscriptorController; /* usar controlador libro */
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +28,6 @@ Route::get('/libro/{categoria_id}', [FiltrosController::class, 'filtro']);
 
 Route::get('/libro', [FiltrosController::class,'busqueda'])->name('libro');
 
+Route::get('/detalleLibro/{id}', [FiltrosController::class, 'detalle'])->name('detalleLibro');
+
 Route::post('/', [AgregarSubscriptorController::class,'agregarSub'])->name('/'); /* llamar a la funcion creada en controller */ 
-
-
-
