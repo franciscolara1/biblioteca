@@ -12,7 +12,7 @@
     </aside>
     <section class="información-libro">
         <h2 class="titulo-libro">{{ $libro-> titulo }}</h2>
-        <h4 class="nombre-autor text-muted">{{ $libro-> autor}}</h4>
+        <h4 class="nombre-autor text-muted">{{ $libro-> autor.' / '.$libro->ano}}</h4>
         <p class="descripción-libro">{{ $libro-> descripcion}}</p>
     </section>
 </div>
