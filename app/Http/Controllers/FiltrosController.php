@@ -39,9 +39,7 @@ class FiltrosController extends Controller
     
     //Este código permite ver en detalle cada libro.
     public function detalle($id) {
-        $libro = Libro::where('id', $id)->value('titulo');
-        $img = Libro::where('id', $id)->value('img');
-
-        return view('páginas.detalleLibro',compact('libro','img'));
+        $libro = Libro::select('*')->where('id', $id)->first();
+        return view('páginas.detalleLibro',['libro' => $libro]);
     }
 }
