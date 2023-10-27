@@ -30,4 +30,4 @@ Route::get('/libro', [FiltrosController::class,'busqueda'])->name('libro');
 
 Route::get('/detalleLibro/{id}', [FiltrosController::class, 'detalle'])->name('detalleLibro');
 
-
+Route::post('/', [AgregarSubscriptorController::class,'agregarSub'])->name('/'); /* llamar a la funcion creada en controller */ 
