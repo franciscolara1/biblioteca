@@ -48,7 +48,7 @@
           <img src="{{ $libro-> img }}" class="card-img-top img-card" alt="...">
           <div class="card-body">
             <h5 class="card-title texto">{{ $libro-> titulo }}</h5>
-            <a href="#" class="btn btn-sm btn-block" id="button-card">Reservar</a>
+              <a href="{{ url('detalleLibro' , ['id' => $libro-> id]) }}"class="btn btn-sm btn-block" id="button-card">Préstamo</a>
           </div>
         </div>
         @endforeach
@@ -65,7 +65,9 @@
       <img src="{{ $libroTurismo-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title texto">{{ $libroTurismo-> titulo }}</h5>
-        <a href="#" class="btn btn-primary"id="button-card">Reservar</a>
+        <form action="" method="get">
+          <a href="{{ url('detalleLibro' , ['id' => $libro-> id]) }}"class="btn btn-sm btn-block" id="button-card">Préstamo</a>
+        </form>
       </div>
     </div>
     @endforeach
@@ -82,7 +84,7 @@
       <img src="{{ $libroLiteratura-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title texto">{{ $libroLiteratura-> titulo }}</h5>
-        <a href="#" class="btn btn-primary"id="button-card">Reservar</a>
+        <a href="{{ url('detalleLibro' , ['id' => $libro-> id]) }}"class="btn btn-sm btn-block" id="button-card">Préstamo</a>
       </div>
     </div>
     @endforeach
@@ -99,7 +101,7 @@
       <img src="{{ $libroHistoria-> img }}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title texto">{{ $libroHistoria-> titulo }}</h5>
-        <a href="#" class="btn btn-primary"id="button-card">Reservar</a>
+        <a href="{{ url('detalleLibro' , ['id' => $libro-> id]) }}"class="btn btn-sm btn-block" id="button-card">Préstamo</a>
       </div>
     </div>
     @endforeach
