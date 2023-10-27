@@ -2,16 +2,18 @@
 
 
 @section('detalle')
-<ol class="breadcrumb"style="position:absolute;top:14%;left:3%;font-size:20px">
+<ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="{{ url('/')}}">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page">Préstamo</li>
 </ol>
 <div class="vistaLibro">
-    <aside style="margin-top:6rem; margin-left:16rem">
-        <img src="{{ asset($libro-> img) }}" alt="imagenLibro">
+    <aside>
+        <img src="{{ asset($libro-> img) }}" alt="imagenLibro" class="imagen-libro">
     </aside>
-    <section style="margin-top:6rem;margin-right:14rem">
-        <h1>{{ $libro-> titulo }}</h1>
+    <section class="información-libro">
+        <h2 class="titulo-libro">{{ $libro-> titulo }}</h2>
+        <h4 class="nombre-autor text-muted">{{ $libro-> autor}}</h4>
+        <p class="descripción-libro">{{ $libro-> descripcion}}</p>
     </section>
 </div>
 

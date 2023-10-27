@@ -1,3 +1,9 @@
+.breadcrumb{
+    position:absolute;
+    top:14%;
+    left:3%;
+    font-size:20px;
+}
 .vistaLibro{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -7,4 +13,75 @@
     justify-items: stretch;
     align-items: stretch;
     margin-top: 7%;
+}
+.vistaLibro > aside {
+    margin-top:6rem; 
+    margin-left:16rem;
+}
+.información-libro{
+    margin-top:6rem;
+    margin-right:6rem;
+}
+.imagen-libro{
+    width: 22rem;
+    height: 30rem;
+}
+.descripción-libro{
+    font-size: 19px;
+    font-family: Dejavu Sans;
+    color:#404040;
+    font-weight: 400;
+    text-align: justify;
+    margin-top: 3rem;
+}
+
+@media only screen and (min-width:1000px) and (max-width:1400px){
+    .vistaLibro{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        justify-items: stretch;
+        align-items: stretch;
+        margin-top: 7%;
+    }
+    .vistaLibro > aside {
+        margin-top:6rem; 
+        margin-left:4rem;
+    }
+    .información-libro{
+        margin-top:6rem;
+        margin-right:1rem;
+        margin-left:1rem;
+    }
+}
+@media only screen and (min-width:100px) and (max-width:1000px){
+    .breadcrumb{
+        position:absolute;
+        top:11%;
+        left:3%;
+        font-size:20px;
+    }
+    .vistaLibro{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        justify-items: stretch;
+        align-items: stretch;
+        margin-top: 7%;
+    }
+    .vistaLibro > aside {
+        margin-top:6rem; 
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .información-libro{
+        margin-top:1rem;
+        margin-right:1rem;
+        margin-left:1rem;
+    }
+
 }
