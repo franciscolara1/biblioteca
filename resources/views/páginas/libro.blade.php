@@ -20,8 +20,8 @@
         <div class="card text-left carta-libro">
           <img src="{{ url($libro-> img) }}" id="card-libros-pag" style="height: 14rem" alt="...">
           <div class="card-body">
-            <h5 class="card-title texto-libros" style="">{{ $libro-> titulo }}</h5>
-            <a href="#" class="btn btn-primary"id="boton-libro">Reservar</a>
+            <h5 class="card-title texto-libros">{{ $libro-> titulo }}</h5>
+            <a href="{{ url('detalleLibro' , ['id' => $libro-> id]) }}"class="btn btn-sm btn-block" id="button-card">Préstamo</a>
           </div>
         </div>
     @endforeach

@@ -30,7 +30,7 @@ class FiltrosController extends Controller
         $texto=trim($request->get('texto'));
         $nombreCategoria = 'Resultados de búsqueda: '.$texto;
         $libros=DB::table('libros')
-                 ->select('titulo','img',)
+                 ->select('id','titulo','img')
                  ->where('titulo','LIKE','%'.$texto.'%')
                  ->orderBy('titulo','asc')
                  ->get();
