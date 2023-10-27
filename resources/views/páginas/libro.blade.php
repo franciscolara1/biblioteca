@@ -11,7 +11,7 @@
   </form>
 </div>
 <ol class="breadcrumb"style="position:absolute;top:14%;left:3%;font-size:20px">
-  <li class="breadcrumb-item"><a href="{{ url('/')}}">Home</a></li>
+  <li class="breadcrumb-item"><a href="{{ url('/')}}">Volver</a></li>
   <li class="breadcrumb-item active" aria-current="page">Libros</li>
 </ol>
 <h1 style="margin-top:15rem;margin-left:3%">{{ $nombreCategoria }}</h1>
