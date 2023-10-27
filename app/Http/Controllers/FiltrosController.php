@@ -16,7 +16,7 @@ class FiltrosController extends Controller
         $nombreCategoria = Categoria::where('id', $categoria_id)->value('nombre_categoria');
 
         // Obtener los libros de la categoría especificada
-        $libros = Libro::select('libros.titulo', 'libros.img')
+        $libros = Libro::select('libros.id','libros.titulo', 'libros.img')
             ->where('categoria_id', $categoria_id)
             ->get();
 
