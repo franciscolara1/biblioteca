@@ -2,7 +2,7 @@
 
 
 @section('libro')
-<div class="search-bar col-6"style="position:absolute;top:18%;left:23%">
+<div class="search-bar col-sm-8 col-md-6"style="">
   <form action="{{ route('libro')}}" method="get">
     <div class="input-group">
       <input class="form-control"type="search" name="texto"id="buscar"placeholder="Busque sus libros...">
@@ -14,7 +14,7 @@
   <li class="breadcrumb-item"><a href="{{ url('/')}}">Home</a></li>
   <li class="breadcrumb-item active" aria-current="page">Libros</li>
 </ol>
-<h1 style="margin-top:12%;margin-left:3%">{{ $nombreCategoria }}</h1>
+<h1 style="margin-top:15rem;margin-left:3%">{{ $nombreCategoria }}</h1>
 <section class="container-fluid libro-estilo col-12">
     @foreach( $libros as $libro)
         <div class="card text-left carta-libro">
