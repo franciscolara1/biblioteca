@@ -34,6 +34,28 @@
     text-align: justify;
     margin-top: 3rem;
 }
+.boton-prestar{
+    border-radius: 0;
+    width: 170px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-family: consolas;
+    font-size: 18px;
+}
+.boton-vista-previa{
+    border-radius: 0;
+    width: 170px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-family: consolas;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.detalle-libro{
+    margin-top: 1rem;
+}
 
 @media only screen and (min-width:1000px) and (max-width:1400px){
     .vistaLibro{
