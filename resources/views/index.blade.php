@@ -139,6 +139,7 @@
 @yield('login')
 @yield('libro')
 @yield('detalle')
+@yield('prestamo')
 <script src="{{ url('js/app.js') }}"></script>
 <script src="{{ url('js/scroll.js') }}"></script>
 
