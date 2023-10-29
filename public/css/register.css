@@ -1,4 +1,4 @@
-.bodylogin2{
+.bodyregister{
     background: #c9ccd1;
     }
     .form-style input{
@@ -21,7 +21,7 @@
     text-align: center;
     color:#ccc;
     }
-    .boton-inicio-sesion{
+    .botonlr{
     height:50px;
     }
     .sideline:before,
@@ -34,7 +34,6 @@
     .sideline:after {
     margin: 0 0 0 20px;
     }
-    
     button{
         height:50px;
     }
@@ -48,8 +47,29 @@
     padding-bottom: 40px;}
 
 
+    .contenedorlogin{
+        max-width: 120rem;
+        margin: 0 auto; 
+     
+     }
 
-.bodylogin{
+.hero {
+    background-image: url(https://www.duoc.cl/wp-content/uploads/2020/06/sedes-campus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    position: relative;   /*Pixeles en lso bordes*/
+}
+
+
+.contenido-hero {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background-color: #007bff;
 }

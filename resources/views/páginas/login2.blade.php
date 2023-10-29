@@ -9,13 +9,16 @@
         <div class="col-md-6 d-none d-md-block">
             <img src="https://strauss.cl/wp-content/uploads/2019/10/duocweb4.jpg" width="1000" height="800"/>
         </div>
+
         <div class="col-md-6 bg-white p-5">
             <h3 class="pb-3">Iniciar Sesion</h3>
             <div class="form-style">
+
                 <form>
                     <div class="form-group pb-3">
                         <input type="email" placeholder="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
+                    
                     <div class="form-group pb-3">
                         <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
                     </div>
