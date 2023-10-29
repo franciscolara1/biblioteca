@@ -4,7 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+
     "content-hash": "cf14086919a839fe740e00554e4baff6",
+
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1321,6 +1323,7 @@
                 "source": "https://github.com/laravel/tinker/tree/v2.8.2"
             },
             "time": "2023-08-15T14:27:00+00:00"
+
         },
         {
             "name": "laravel/ui",
@@ -1382,6 +1385,7 @@
                 "source": "https://github.com/laravel/ui/tree/v3.4.6"
             },
             "time": "2022-05-20T13:38:08+00:00"
+
         },
         {
             "name": "league/commonmark",
@@ -4915,6 +4919,7 @@
         },
         {
             "name": "symfony/string",
+
             "version": "v6.0.19",
             "source": {
                 "type": "git",
@@ -4925,6 +4930,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/string/zipball/d9e72497367c23e08bf94176d2be45b00a9d232a",
                 "reference": "d9e72497367c23e08bf94176d2be45b00a9d232a",
+
                 "shasum": ""
             },
             "require": {
@@ -4980,7 +4986,9 @@
                 "utf8"
             ],
             "support": {
+
                 "source": "https://github.com/symfony/string/tree/v6.0.19"
+
             },
             "funding": [
                 {
@@ -4996,6 +5004,7 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2023-01-01T08:36:10+00:00"
         },
         {
@@ -5010,6 +5019,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation/zipball/9c24b3fdbbe9fb2ef3a6afd8bbaadfd72dad681f",
                 "reference": "9c24b3fdbbe9fb2ef3a6afd8bbaadfd72dad681f",
+
                 "shasum": ""
             },
             "require": {
@@ -5075,7 +5085,9 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v6.0.19"
+
+                "source": "https://github.com/symfony/translation/tree/v5.4.30"
+
             },
             "funding": [
                 {
@@ -5091,7 +5103,9 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-01T08:36:10+00:00"
+
+            "time": "2023-10-28T09:19:54+00:00"
+
         },
         {
             "name": "symfony/translation-contracts",
@@ -7911,7 +7925,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3|^8.0"
+        "php": "^7.2|^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"

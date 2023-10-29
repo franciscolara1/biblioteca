@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibrosController;
 use App\Http\Controllers\FiltrosController;
+use App\Http\Controllers\AgregarSubscriptorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,8 +35,15 @@ Route::get('/register', function () {
     return view('auth.register');
 });
 
+Route::get('/detalleLibro/{id}', [FiltrosController::class, 'detalle'])->name('detalleLibro');
 
+Route::post('/', [AgregarSubscriptorController::class,'agregarSub'])->name('/'); /* llamar a la funcion creada en controller */ 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/prestamo', function () {
+    return view('páginas.prestamo');
+});
+

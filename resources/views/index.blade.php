@@ -16,6 +16,9 @@
     <link href="{{ asset('css/menu.css') }}" rel="stylesheet">
     <link href="{{ asset('css/libros.css') }}" rel="stylesheet">
     <link href="{{ asset('css/register.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/detalle.css') }}" rel="stylesheet">
+    
+
     
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <!-- Google Fonts -->
@@ -92,13 +95,13 @@
                   <ul class="escuela-list">
                       <li><a href="{{ url('libro' , ['categoria_id' => 1]) }}">Escuela de informática y Telecomunicaciones</a></li>
                       <li><a href="{{ url('libro' , ['categoria_id' => 2]) }}">Escuela de diseño</a></li>
-                      <li><a href="#">Escuela de Administración y Negocios</a></li>
-                      <li><a href="#">Escuela de Comunicación</a></li>
-                      <li><a href="#">Escuela de Construcción</a></li>
-                      <li><a href="#">Escuela de Ingeniería</a></li>
+                      <li><a href="{{ url('libro' , ['categoria_id' => 3]) }}">Escuela de Administración y Negocios</a></li>
+                      <li><a href="{{ url('libro' , ['categoria_id' => 4]) }}">Escuela de Comunicación</a></li>
+                      <li><a href="{{ url('libro' , ['categoria_id' => 5]) }}">Escuela de Construcción</a></li>
+                      <li><a href="{{ url('libro' , ['categoria_id' => 6]) }}">Escuela de Ingeniería</a></li>
                       <li><a href="{{ url('libro' , ['categoria_id' => 7]) }}">Escuela de Turismo</a></li>
-                      <li><a href="#">Escuela de Salud</a></li>
-                      <li><a href="#">Escuela de Recursos naturales</a></li>
+                      <li><a href="{{ url('libro' , ['categoria_id' => 8]) }}">Escuela de Salud</a></li>
+                      <li><a href="{{ url('libro' , ['categoria_id' => 9]) }}">Escuela de Recursos naturales</a></li>
                   </ul>
                 </div>
               </div>
@@ -137,6 +140,8 @@
 @yield('content')
 @yield('login')
 @yield('libro')
+@yield('detalle')
+@yield('prestamo')
 <script src="{{ url('js/app.js') }}"></script>
 <script src="{{ url('js/scroll.js') }}"></script>
 

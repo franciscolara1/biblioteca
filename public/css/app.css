@@ -110,8 +110,45 @@ ul > li > a > span > i {
 .search-bar{
     margin-left: auto;
     margin-right: auto;
-    position:relative;
-    top:70px;
+    position:absolute;
+    top:18%;
+    left:23%
+}
+.barra-busqueda{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+}
+@media only screen and (min-width:700px) and (max-width:1600px){
+    .search-bar{
+        margin-left: auto;
+        margin-right: auto;
+        position:absolute;
+        top:18%;
+        left:23%
+        
+    }
+    .barra-busqueda{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        width:670px;
+    }
+}
+@media only screen and (min-width:100px) and (max-width:400px){
+    .search-bar{
+        margin-left: auto;
+        margin-right: auto;
+        position:absolute;
+        top:18%;
+        left:10%
+    }
+    .barra-busqueda{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        width:270px;
+    }
 }
 /* search icon */
 .bi-search{
