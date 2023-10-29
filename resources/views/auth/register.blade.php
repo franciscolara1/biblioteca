@@ -7,7 +7,7 @@
         <div>
             <div>
                 <div class="contenido-hero">
-                    <div class="col-md-7 bg-white p-1"">
+                    <div class="col-md-7 bg-white p-1">
                         <div class="pb-3">{{ __('Register') }}</div>
                         <div class="card-body">
                             <form method="POST" action="{{ route('register') }}">
@@ -28,7 +28,7 @@
                                     <div class="col-md-6">
                                         <select id="carrera" class="form-select col-md-6 " name="carrera" value="{{ old('carrera') }}" aria-label="Default select example">
                                             <option hidden selected>Selecccione su carrera</option>
-                                            <option value="Ing. infromatica">Ing. infromatica</option>
+                                            <option value="Ing. informatica">Ing. informatica</option>
                                             <option value="Adm. telecomunicaciones">Adm. telecomunicaciones</option>
                                             <option value="Marketing">Marketing</option>
                                         </select>

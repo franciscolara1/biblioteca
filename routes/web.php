@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibrosController;
 use App\Http\Controllers\FiltrosController;
 use App\Http\Controllers\AgregarSubscriptorController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,7 @@ Route::get('/libro', [FiltrosController::class,'busqueda'])->name('libro');
 Route::get('/register', function () {
     return view('auth.register');
 });
+Route::post('/register', [RegisterController::class,'register'])->name('register');
 
 Route::get('/detalleLibro/{id}', [FiltrosController::class, 'detalle'])->name('detalleLibro');
 

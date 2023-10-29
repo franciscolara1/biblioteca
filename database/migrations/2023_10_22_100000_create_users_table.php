@@ -22,13 +22,6 @@ class CreateUsersTable extends Migration
             $table->string('carrera');
             $table->rememberToken();
             $table->timestamps();
-
-            $table->unsignedBigInteger('id_sede'); // Clave foránea
-            $table->unsignedBigInteger('id_rol'); // Clave foránea
-        
-            // Definir la clave foránea
-            $table->foreign('id_sede')->references('id')->on('sedes');
-            $table->foreign('id_rol')->references('id')->on('perfiles');
         });
     }
 
