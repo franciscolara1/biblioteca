@@ -15,8 +15,8 @@
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link href="{{ asset('css/menu.css') }}" rel="stylesheet">
     <link href="{{ asset('css/libros.css') }}" rel="stylesheet">
-
     <link href="{{ asset('css/detalle.css') }}" rel="stylesheet">
+    
     
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <!-- Google Fonts -->
