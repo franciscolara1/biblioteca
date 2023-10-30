@@ -35,7 +35,7 @@ Route::get('/libro', [FiltrosController::class,'busqueda'])->name('libro');
 Route::get('/register', function () {
     return view('auth.register');
 });
-Route::post('/register', [RegisterController::class,'register'])->name('register');
+//Route::post('/register', [RegisterController::class,'register'])->name('register');
 
 Route::get('/detalleLibro/{id}', [FiltrosController::class, 'detalle'])->name('detalleLibro');
 

@@ -8,7 +8,7 @@
             <div>
                 <div class="contenido-hero">
                     <div class="col-md-7 bg-white p-1">
-                        <div class="pb-3">{{ __('Register') }}</div>
+                        <h4 class="pb-5">{{ __('Registro de Usuario') }}</h4>
                         <div class="card-body">
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
@@ -27,7 +27,7 @@
                                     <label for="carrera" class="col-md-4 col-form-label text-md-end">{{ __('Carrera') }}</label>
                                     <div class="col-md-6">
                                         <select id="carrera" class="form-select col-md-6 " name="carrera" value="{{ old('carrera') }}" aria-label="Default select example">
-                                            <option hidden selected>Selecccione su carrera</option>
+                                            <option hidden>Selecccione su carrera</option>
                                             <option value="Escuela de Informática y Telecomunicaciones">Escuela de Informática y Telecomunicaciones</option>
                                             <option value="Escuela de Diseño">Escuela de Diseño</option>
                                             <option value="Escuela de Administración y Negocios">Escuela de Administración y Negocios</option>
@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="row mb-0">
                                     <div class="col-md-6 offset-md-4">
-                                        <button type="submit" class="btn btn-dark w-100 font-weight-bold mt-2">{{ __('Register') }}</button>
+                                        <button type="submit" class="btn btn-dark w-100 font-weight-bold mt-2">{{ __('Registrarse') }}</button>
                                     </div>
                                 </div>
                             </form>
