@@ -275,5 +275,11 @@ section {
     flex-direction: row;
     
 }
-
+/* Cerrar Sesion */
+.cerrar-sesión{
+    color:white;
+    position: relative;
+    bottom:30px;
+    text-decoration: none;
+}
 

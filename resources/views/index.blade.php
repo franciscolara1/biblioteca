@@ -5,6 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
@@ -43,13 +57,16 @@
                 </span></a>
                 <a id="textMenu1"style="position:relative;right:1px;bottom:30px;"href="#">Consúltanos</a>
             </li>
+            @guest
             <li class="busqueda">
               <a class="nav-link" href="{{ url('login')}}">
                 <span style="font-size:50px;">
                    <i class="fi fi-sr-circle-user" id="icon2"></i>
                 </span></a>
-                <a id="textMenu2"style="position:relative;left:1px;bottom:30px;"href="{{ url('login')}}">Cuenta</a>
+                <a id="textMenu2"style="position:relative;left:1px;bottom:30px;"href="{{ url('login')}}">Iniciar Sesión</a>
             </li>
+            @endguest
+            @auth
             <li class="busqueda">
               <a class="nav-link" href="{{ url('libro')}}">
                 <span style="font-size:50px;">
@@ -59,11 +76,17 @@
             </li>
             <li class="busqueda">
               <a class="nav-link" href="#">
-                <span style="font-size:50px;">
-                  <i class="fi fi-sr-book-open-reader"></i>
-                </span></a>
-                <a id="textMenu4"style="position:relative;left:1px;bottom:30px;"href="#">Alumnos</a>
+                </a>
+                <a class="cerrar-sesión" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();"><span style="font-size:50px;position: relative;top:20px">
+                  <i class="bi bi-box-arrow-right"></i>
+                </span><br>Cerrar Sesión</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  @csrf
+                </form>
             </li>
+            @endauth
             <li class="busqueda">
               <a class="nav-link" href="#">
                 <span style="font-size:50px;">
@@ -72,6 +95,10 @@
                 <a id="textMenu5"style="position:relative;right:1px;bottom:30px;"href="#">Docentes</a>
               </li>
           </ul>
+          @auth
+        <h5 style="position: relative;right:25rem;top:10px;color:white;margin-right:4rem">Bienvenido {{ Auth::user()-> name }},
+        <br>de la carrera {{ Auth::user()-> carrera}}</h5>
+        @endauth
         </div>
         <button class="btn btn-warning"id="abrir">
           <i class="bi bi-list" id="burguer"></i>
