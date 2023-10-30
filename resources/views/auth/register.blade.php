@@ -28,9 +28,15 @@
                                     <div class="col-md-6">
                                         <select id="carrera" class="form-select col-md-6 " name="carrera" value="{{ old('carrera') }}" aria-label="Default select example">
                                             <option hidden selected>Selecccione su carrera</option>
-                                            <option value="Ing. informatica">Ing. informatica</option>
-                                            <option value="Adm. telecomunicaciones">Adm. telecomunicaciones</option>
-                                            <option value="Marketing">Marketing</option>
+                                            <option value="Escuela de Informática y Telecomunicaciones">Escuela de Informática y Telecomunicaciones</option>
+                                            <option value="Escuela de Diseño">Escuela de Diseño</option>
+                                            <option value="Escuela de Administración y Negocios">Escuela de Administración y Negocios</option>
+                                            <option value="Escuela de Comunicación">Escuela de Comunicación</option>
+                                            <option value="Escuela de Construcción">Escuela de Construcción</option>
+                                            <option value="Escuela de Ingeniería">Escuela de Ingeniería</option>
+                                            <option value="Escuela de Turismo">Escuela de Turismo</option>
+                                            <option value="Escuela de Salud">Escuela de Salud</option>
+                                            <option value="Escuela de Recursos naturales">Escuela de Recursos naturales</option>
                                         </select>
                                         @error('carrera')
                                         <span class="invalid-feedback" role="alert">
