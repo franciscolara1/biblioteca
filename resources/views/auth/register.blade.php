@@ -7,13 +7,13 @@
         <div>
             <div>
                 <div class="contenido-hero">
-                    <div class="col-md-7 bg-white p-1">
+                    <div class="col-md-6 p-1 formulario-registro">
                         <h4 class="pb-5">{{ __('Registro de Usuario') }}</h4>
                         <div class="card-body">
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <div class="row mb-3">
-                                    <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
+                                    <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nombre') }}</label>
                                     <div class="col-md-6">
                                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                         @error('name')
@@ -24,10 +24,10 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3"> 
-                                    <label for="carrera" class="col-md-4 col-form-label text-md-end">{{ __('Carrera') }}</label>
+                                    <label for="carrera" class="col-md-4 col-form-label text-md-end">{{ __('Escuela') }}</label>
                                     <div class="col-md-6">
                                         <select id="carrera" class="form-select col-md-6 " name="carrera" value="{{ old('carrera') }}" aria-label="Default select example">
-                                            <option hidden>Selecccione su carrera</option>
+                                            <option hidden>Selecccione su escuela</option>
                                             <option value="Escuela de Informática y Telecomunicaciones">Escuela de Informática y Telecomunicaciones</option>
                                             <option value="Escuela de Diseño">Escuela de Diseño</option>
                                             <option value="Escuela de Administración y Negocios">Escuela de Administración y Negocios</option>
@@ -46,7 +46,7 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
                                     <div class="col-md-6">
                                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                                         @error('email')
@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="row mb-0">
                                     <div class="col-md-6 offset-md-4">
-                                        <button type="submit" class="btn btn-dark w-100 font-weight-bold mt-2">{{ __('Registrarse') }}</button>
+                                        <button type="submit" class="btn btn-warning w-100 font-weight-bold mt-2 mb-5">{{ __('Registrarse') }}</button>
                                     </div>
                                 </div>
                             </form>

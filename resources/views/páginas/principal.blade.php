@@ -38,6 +38,17 @@
         </div>
       </form>
     </div>
+    <!-- Mensaje de confirmación de inicion de sesión -->
+    @if (session('message'))
+    <div class="alert alert-success" id="flash-message" style="position:fixed;bottom:10px;right:3rem;z-index:99;">
+        {{ session('message') }}
+    </div>
+    <script>
+        setTimeout(function() {
+            document.getElementById('flash-message').style.display = 'none';
+        }, 5000); // El mensaje desaparecerá después de 5 segundos (5000 milisegundos)
+    </script>
+    @endif
     <!-- ********** SECCIÓN 1 ********** -->
 <section class="container-fluid"id="cards">
   <h3 id="titulo-libros">Escuela Informática y Telecomunicaciones.</h3>
@@ -150,7 +161,7 @@
           <h5 style="color:whitesmoke;">Suscríbete y recibe información</h5>
           <label style="color:antiquewhite;position:relative;right:12rem;margin-bottom:4px">Dirección de correo electrónico</label><!-- AJUSTAR -->
           <div class="input-group">
-            <input type="email" name="subscriptor" class="form-control" id="input-email" placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" aria-describedby="button-addon2"> <!-- cuadro de texto -->
+            <input type="email" name="subscriptor" class="form-control" id="input-email" placeholder="Ingresa tú correo" aria-label="Ingresa tu correo" aria-describedby="button-addon2"> <!-- cuadro de texto -->
             <button class="btn btn-outline-warning" type="submit" id="button-addon2">Suscribirme</button>
           </div>
         </form>
@@ -190,7 +201,7 @@
     <img src="../img/acreditacion.png" alt="">
   </div>
   <div>
-    <h3>Derechos reservados Innovateca@</h3>
+    <h3>Derechos reservados Innovateca 2023.</h3>
   </div>
 </footer>
 

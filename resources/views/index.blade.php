@@ -97,7 +97,7 @@
           </ul>
           @auth
         <h5 style="position: relative;right:25rem;top:10px;color:white;margin-right:4rem">Bienvenido {{ Auth::user()-> name }},
-        <br>de la carrera {{ Auth::user()-> carrera}}</h5>
+        <br>de la {{ Auth::user()-> carrera}}.</h5>
         @endauth
         </div>
         <button class="btn btn-warning"id="abrir">
