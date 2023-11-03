@@ -56,7 +56,7 @@
                     <div class="form-group pb-3">
                         <div class="pb-2">
                             <button type="submit" class="btn btn-dark w-100 font-weight-bold mt-2 boton-inicio-sesion">
-                                {{ __('Login') }}
+                                {{ __('Ingresar') }}
                             </button>
                             @if (Route::has('password.request'))
                             <a class="btn btn-link" href="{{ route('password.request') }}">

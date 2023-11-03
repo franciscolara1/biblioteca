@@ -31,6 +31,7 @@
     <link href="{{ asset('css/libros.css') }}" rel="stylesheet">
     <link href="{{ asset('css/register.css') }}" rel="stylesheet">
     <link href="{{ asset('css/detalle.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/prestamo.css') }}" rel="stylesheet">
     
 
     
@@ -68,11 +69,11 @@
             @endguest
             @auth
             <li class="busqueda">
-              <a class="nav-link" href="{{ url('libro')}}">
+              <a class="nav-link" href="{{ url('prestamo')}}">
                 <span style="font-size:50px;">
                   <i class="fi fi-sr-book-alt" id="icon3"></i>
                 </span></a>
-                <a id="textMenu3"style="position:relative;left:1px;bottom:30px;"href="{{ url('libro')}}">Prestamos</a>
+                <a id="textMenu3"style="position:relative;left:1px;bottom:30px;"href="{{ url('prestamo')}}">Prestamos</a>
             </li>
             <li class="busqueda">
               <a class="nav-link" href="#">
@@ -88,11 +89,11 @@
             </li>
             @endauth
             <li class="busqueda">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{ url('horarios')}}" style="position: relative;top:-6px">
                 <span style="font-size:50px;">
-                  <i class="fi fi-sr-chalkboard-user"></i>
+                  <i class="bi bi-clock-fill"></i>
                 </span></a>
-                <a id="textMenu5"style="position:relative;right:1px;bottom:30px;"href="#">Docentes</a>
+                <a id="textMenu5"style="position:relative;right:1px;bottom:30px;"href="{{ url('horarios')}}">Horarios</a>
               </li>
           </ul>
           @auth
@@ -109,6 +110,28 @@
       <nav class="menu">
         <li class="logo-duoc"><img src="img/duoc.jpg" alt=""></li>
         <li><h1 style="font-size:24px;margin-top:70px;color:white;text-align:center">Catálogo </h1></li>
+        <ul class="d-xxl-none mt-5">
+          <li><a class="d-xxl-none text-white"href="#"><span><i class="bi bi-info-circle-fill"style="font-size:25px;position:relative;top:4px;margin-right:5px"></i>
+          </span>Consultanos</a></li>
+          @auth
+          <li><a class="d-xxl-none text-white"href="#"><span><i class="bi bi-book"style="font-size:25px;position:relative;top:4px;margin-right:5px"></i>
+          </span>Prestamos</a></li>
+          @endauth
+          @guest
+          <li><a class="d-xxl-none text-white"href="{{ url('login')}}"><span><i class="bi bi-box-arrow-in-right"style="font-size:25px;position:relative;top:4px;margin-right:5px"></i>
+          </span>  Iniciar Sesión</a></li>
+          @endguest
+          @auth
+          <li><a class="d-xxl-none text-white" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();"><span>
+              <i class="bi bi-box-arrow-left"style="font-size:25px;position:relative;top:4px;margin-right:5px"></i>
+            </span>Cerrar Sesión</a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+            </form></li>
+          @endauth
+        </ul>
         <ul class="nav-list">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
@@ -141,25 +164,20 @@
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
                   <div class="accordion-body">
                     <ul class="escuela-list">
-                        <li><a href="#">Ficción</a></li>
-                        <li><a href="#">Infantiles</a></li>
-                        <li><a href="#">Humanidades</a></li>
+                        <li><a href="{{ url('libro' , ['categoria_id' => 10]) }}">Ficción</a></li>
+                        <li><a href="{{ url('libro' , ['categoria_id' => 11]) }}">Infantiles</a></li>
+                        <li><a href="{{ url('libro' , ['categoria_id' => 12]) }}">Humanidades</a></li>
                         <li><a href="{{ url('libro' , ['categoria_id' => 13]) }}">Literatura</a></li>
                         <li><a href="{{ url('libro' , ['categoria_id' => 14]) }}">Historia</a></li>
                         <li><a href="{{ url('libro' , ['categoria_id' => 15]) }}">Biografia</a></li>
-                        <li><a href="#">Estilo de vida,deportes y ocio</a></li>
-                        <li><a href="#">Novelas</a></li>
-                        <li><a href="#">Cuentos</a></li>
-                        <li><a href="#">Terror</a></li>                       
+                        <li><a href="{{ url('libro' , ['categoria_id' => 16]) }}">Estilo de vida,deportes y ocio</a></li>
+                        <li><a href="{{ url('libro' , ['categoria_id' => 17]) }}">Novelas</a></li>
+                        <li><a href="{{ url('libro' , ['categoria_id' => 18]) }}">Cuentos</a></li>
+                        <li><a href="{{ url('libro' , ['categoria_id' => 19]) }}">Terror</a></li>                       
                     </ul>
                   </div>
                 </div>
-            </div>
-          <li><a class="d-xxl-none"href="#">Consultanos</a></li>
-          <li><a class="d-xxl-none"href="#">Cuenta</a></li>
-          <li><a class="d-xxl-none"href="#">Libros</a></li>
-          <li><a class="d-xxl-none"href="#">Alumnos</a></li>
-          <li><a class="d-xxl-none"href="#">Docentes</a></li>
+              </div>
         </ul>
       </nav>
     </header>
@@ -169,6 +187,7 @@
 @yield('libro')
 @yield('detalle')
 @yield('prestamo')
+@yield('horario')
 <script src="{{ url('js/app.js') }}"></script>
 <script src="{{ url('js/scroll.js') }}"></script>
 

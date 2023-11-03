@@ -6,6 +6,7 @@ use App\Http\Controllers\LibrosController;
 use App\Http\Controllers\FiltrosController;
 use App\Http\Controllers\AgregarSubscriptorController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\General;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,4 +49,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/prestamo', function () {
     return view('páginas.prestamo');
 });
-
+/* HORARIOS BIBLIOTECA*/
+Route::get('/horarios', [General::class, 'horarios']);
