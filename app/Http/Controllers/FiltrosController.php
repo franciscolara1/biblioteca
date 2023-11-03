@@ -44,10 +44,10 @@ class FiltrosController extends Controller
                 ->join('categorias','libros.categoria_id','=','categorias.id')
                 ->where('libros.id', $id)->first();
         $stock = Stock::select('libros.id','stocks.cantidad','sedes.nombre_sede')
-        ->join('sedes','sedes.id','=','stocks.id_sede')
-        ->join('libros','libros.id','=','stocks.id_libro')
-        ->where('id_libro', $id)
-        ->get(); 
+                ->join('sedes','sedes.id','=','stocks.id_sede')
+                ->join('libros','libros.id','=','stocks.id_libro')
+                ->where('id_libro', $id)
+                ->get(); 
         return view('páginas.detalleLibro',['libro' => $libro, 'stock' => $stock]);
     }
 }

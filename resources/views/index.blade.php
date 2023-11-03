@@ -109,7 +109,7 @@
       </nav>
       <nav class="menu">
         <li class="logo-duoc"><img src="img/duoc.jpg" alt=""></li>
-        <li><h1 style="font-size:24px;margin-top:70px;color:white;text-align:center">Catálogo </h1></li>
+        <li><h1 style="font-size:24px;margin-top:70px;color:white;text-align:center">Menu</h1></li>
         <ul class="d-xxl-none mt-5">
           <li><a class="d-xxl-none text-white"href="#"><span><i class="bi bi-info-circle-fill"style="font-size:25px;position:relative;top:4px;margin-right:5px"></i>
           </span>Consultanos</a></li>

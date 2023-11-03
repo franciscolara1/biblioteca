@@ -18,6 +18,7 @@ class CreateReservasTable extends Migration
             $table->integer('dias');
             $table->timestamp('fecha_inicio');
             $table->timestamp('fecha_termino');
+            $table->timestamps();
 
 
             $table->unsignedBigInteger('id_libro'); // Clave foránea

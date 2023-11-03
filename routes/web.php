@@ -7,6 +7,7 @@ use App\Http\Controllers\FiltrosController;
 use App\Http\Controllers\AgregarSubscriptorController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\General;
+use App\Http\Controllers\PrestamosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,7 @@ Route::get('/register', function () {
 //Route::post('/register', [RegisterController::class,'register'])->name('register');
 
 Route::get('/detalleLibro/{id}', [FiltrosController::class, 'detalle'])->name('detalleLibro');
+Route::post('/detalleLibro/{id}', [PrestamosController::class, 'prestamo'])->name('detalleLibro.prestar');
 
 Route::post('/', [AgregarSubscriptorController::class,'agregarSub'])->name('/'); /* llamar a la funcion creada en controller */ 
 
