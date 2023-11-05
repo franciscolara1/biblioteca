@@ -19,6 +19,7 @@ class CreateMorocidadesTable extends Migration
             $table->integer('valor');
             $table->unsignedBigInteger('id_usuario'); //clave foranea
             $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
 
             //Definir la clave foranea
             $table->foreign('id_usuario')->references('id')->on('users');

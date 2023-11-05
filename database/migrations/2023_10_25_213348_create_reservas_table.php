@@ -19,6 +19,8 @@ class CreateReservasTable extends Migration
             $table->timestamp('fecha_inicio');
             $table->timestamp('fecha_termino');
             $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
+            $table->boolean('reservado')->default(false);
 
 
             $table->unsignedBigInteger('id_libro'); // Clave foránea

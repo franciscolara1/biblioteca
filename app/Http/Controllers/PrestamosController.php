@@ -20,6 +20,7 @@ class PrestamosController extends Controller
         $id_user = Auth::user()->id;
         $fecha_inicio = now();
         $fecha_termino = $fecha_inicio->copy()->addWeek();
+        $reservado = false;
         
         // Verificar si el usuario ya ha realizado un préstamo para el mismo libro
         $prestamoExistente = Reserva::where('id_user', $id_user)
@@ -31,9 +32,7 @@ class PrestamosController extends Controller
             return redirect()->route('detalleLibro', ['id' => $id_libro])
                 ->with('error', 'Ya has realizado un préstamo para este libro');
         } else {
-            // Verificar si el usuario ha prestado cualquier libro
-            $prestamoCualquierLibro = Reserva::where('id_user', $id_user)->first();
-    
+            
             // Insertar los datos en la tabla reserva
             Reserva::create([
                 'dias' => $dias,
@@ -42,6 +41,7 @@ class PrestamosController extends Controller
                 'id_user' => $id_user,
                 'fecha_inicio' => $fecha_inicio,
                 'fecha_termino' => $fecha_termino,
+                'reservado'=> $reservado,
             ]);
     
             return redirect()->route('detalleLibro', ['id' => $id_libro])

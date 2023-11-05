@@ -16,5 +16,7 @@ class reserva extends Model
         'id_user',
         'fecha_inicio',
         'fecha_termino',
+        'reservado',
+        'deleted_at',
     ];
 }
