@@ -1,0 +1,36 @@
+.ficha {
+    display: grid;
+    grid-template-columns: 1fr 257px;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+    margin-top:10%;
+ }
+ .estado{
+    border-radius: 0;
+ }
+ .estado > h5{
+    margin-left:20px;
+    margin-right:20px;
+ }
+ .sanciones{
+    background-color: #306d9c;
+    margin-top: 10px;
+    padding-left: 1rem;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    color:whitesmoke;
+ }
+ .debido{
+    text-align: center;
+ }
+ .ficha-principal{
+    border-radius: 0;
+    border-style: solid;
+    border-color: black;
+    width: 73rem;
+ }
+ .ficha-principal > h3{
+    background-color: #306d9c;
+ }

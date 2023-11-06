@@ -13,6 +13,7 @@ class PrestamosController extends Controller
     {
         $this->middleware('auth');
     }
+    //Función para realizar el prestamo de un libro.
     public function prestamo(Request $request) {
         $dias = 7;
         $id_libro = $request->input('id_libro');
@@ -47,5 +48,24 @@ class PrestamosController extends Controller
             return redirect()->route('detalleLibro', ['id' => $id_libro])
                 ->with('success', 'Préstamo guardado');
         }
+    }
+    
+    //Función para poder visualizar los libros prestados
+    public function verPrestamos(){
+        $id_user = Auth::user()->id;
+    
+        $prestamos = Reserva::select('libros.titulo','libros.autor','reservas.fecha_inicio','reservas.fecha_termino')
+            ->join('libros','reservas.id_libro','=','libros.id')
+            ->where('reservas.id_user', $id_user)
+            ->get();
+        // Convertir las fechas en objetos Carbon para poder ver solo dia/mes/año
+        foreach ($prestamos as $prestamo) {
+            $prestamo->fecha_inicio = \Carbon\Carbon::parse($prestamo->fecha_inicio);
+            $prestamo->fecha_termino = \Carbon\Carbon::parse($prestamo->fecha_termino);
+        }
+    
+        return $prestamos->isEmpty()
+            ? view('páginas.prestamo')->with('error', 'No tienes préstamos en este momento.')
+            : view('páginas.prestamo')->with('prestamos', $prestamos);
     }
 }

@@ -37,19 +37,19 @@ Route::get('/libro', [FiltrosController::class,'busqueda'])->name('libro');
 Route::get('/register', function () {
     return view('auth.register');
 });
-//Route::post('/register', [RegisterController::class,'register'])->name('register');
 
+//Rutas para mostrar libros según id.
 Route::get('/detalleLibro/{id}', [FiltrosController::class, 'detalle'])->name('detalleLibro');
 Route::post('/detalleLibro/{id}', [PrestamosController::class, 'prestamo'])->name('detalleLibro.prestar');
 
+//Ruta para suscribirse con el newsletter
 Route::post('/', [AgregarSubscriptorController::class,'agregarSub'])->name('/'); /* llamar a la funcion creada en controller */ 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/prestamo', function () {
-    return view('páginas.prestamo');
-});
+//Ver prestamos
+Route::get('/prestamo', [PrestamosController::class, 'verPrestamos'])->name('prestamo');
 /* HORARIOS BIBLIOTECA*/
 Route::get('/horarios', [General::class, 'horarios']);
