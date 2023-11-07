@@ -9,6 +9,7 @@
  }
  .estado{
     border-radius: 0;
+    height: 15rem;
  }
  .estado > h5{
     margin-left:20px;
@@ -33,4 +34,9 @@
  }
  .ficha-principal > h3{
     background-color: #306d9c;
+ }
+ .tabs{
+   position: relative;
+   top:12rem;
+   left:19.5rem;
  }
