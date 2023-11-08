@@ -1,7 +1,7 @@
 @extends('index')
 
 @section('prestamo')
-<header style="position:relative;top:10rem;text-align:center">
+<header class="col-12"style="position:relative;top:10rem;text-align:center">
   <h1 >Gestión de Alumno</h1>
  <p class="text-muted">En el siguiente panel puedes ver tus préstamos, tus sanciones y tus reservas.<br>
 Recuerda que debes devolver el libro para que no te siga aumentando el monto de sanción.</p>

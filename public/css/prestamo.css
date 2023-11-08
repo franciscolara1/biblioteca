@@ -1,6 +1,7 @@
 .ficha {
     display: grid;
-    grid-template-columns: 1fr 257px;
+    grid-template-columns: 2fr 257px;
+    grid-template-rows: 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 20px;
     justify-items: stretch;
