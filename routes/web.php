@@ -8,6 +8,7 @@ use App\Http\Controllers\AgregarSubscriptorController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\General;
 use App\Http\Controllers\PrestamosController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +54,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/prestamo', [PrestamosController::class, 'verPrestamos'])->name('prestamo');
 /* HORARIOS BIBLIOTECA*/
 Route::get('/horarios', [General::class, 'horarios']);
+
+//ADMINISTRADOR
+Route::get('/admin', [AdminController::class, 'gestionarPrestamosAlumnos'])->name('admin');
+
+//Registrar libro devuelto
+Route::put('/marcar-devuelto/{id}', [AdminController::class, 'marcarDevuelto'])->name('marcar.devuelto');

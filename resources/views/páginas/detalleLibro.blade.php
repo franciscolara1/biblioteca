@@ -4,7 +4,7 @@
 @section('detalle')
 <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="{{ url('') }}">Volver</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Préstamo</li>
+    <li class="breadcrumb-item active" aria-current="page">Libro</li>
 </ol>
 <div class="vistaLibro">
     <aside>

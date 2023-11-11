@@ -1,12 +1,23 @@
-.ficha {
+/* SECCIÓN PRESTAMOS ----------------------------------- */
+.sección1{
     display: grid;
-    grid-template-columns: 2fr 257px;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 20px;
     justify-items: stretch;
     align-items: stretch;
     margin-top:10%;
+}
+.ficha {
+    display: grid;
+    grid-template-columns: 1fr 257px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+    margin-top:1%;
  }
  .estado{
     border-radius: 0;
@@ -30,7 +41,8 @@
  .ficha-principal{
     border-radius: 0;
     border-style: solid;
-    border-color: black;
+    border-width: 1px;
+    border-color:gray;
     width: 73rem;
  }
  .ficha-principal > h3{
@@ -38,6 +50,222 @@
  }
  .tabs{
    position: relative;
-   top:12rem;
-   left:19.5rem;
+   top:1rem;
+   left:0rem;
+   width: 31rem;
  }
+
+ @media only screen and (min-width:1000px) and (max-width:1400px){
+   
+   .ficha {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    justify-items: stretch;
+    align-items: stretch;
+    margin-top:1%;
+   }
+   .ficha-principal{
+      border-radius: 0;
+      border-style: solid;
+      border-width: 1px;
+      border-color:gray;
+      width: 58rem;
+   }
+   .sanciones{
+      background-color: #306d9c;
+      margin-top: 10px;
+      padding-left: 1rem;
+      padding-bottom: 4px;
+      padding-top: 4px;
+      color:whitesmoke;
+   }
+   .estado{
+      border-radius: 0;
+      height: 15rem;
+      
+   }
+   
+}
+@media only screen and (min-width:100px) and (max-width:1000px){
+   .titulo-gestión-alumno{
+      margin-top:13%;
+   }
+   .ficha {
+      display: grid;
+      grid-template-columns: 1fr ;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 5px;
+      grid-row-gap: 10px;
+      justify-items: stretch;
+      align-items: stretch;
+      margin-top:1%;
+     }
+     .ficha-principal{
+        border-radius: 0;
+        border-style: solid;
+        border-width: 1px;
+        border-color:gray;
+        width: 44rem;
+     }
+     .sanciones{
+        background-color: #306d9c;
+        margin-top: 10px;
+        padding-left: 1rem;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        color:whitesmoke;
+     }
+     .estado{
+        border-radius: 0;
+        height: 10rem;
+        width:30rem;
+        
+     }
+
+}
+@media only screen and (min-width:100px) and (max-width:770px){
+   .titulo-gestión-alumno{
+      margin-top:20%;
+   }
+   .ficha {
+      display: grid;
+      grid-template-columns: 1fr ;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 5px;
+      grid-row-gap: 10px;
+      justify-items: stretch;
+      align-items: stretch;
+      margin-top:1%;
+     }
+     .ficha-principal{
+        border-radius: 0;
+        border-style: solid;
+        border-width: 1px;
+        border-color:gray;
+        width: 34rem;
+        margin-right: 20%;
+     }
+     .sanciones{
+        background-color: #306d9c;
+        margin-top: 10px;
+        padding-left: 1rem;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        color:whitesmoke;
+     }
+     .estado{
+        border-radius: 0;
+        height: 10rem;
+        width:30rem;
+        
+     }
+
+}
+/*********************************** FIN SECCIÓN PRÉSTAMOS **********************************************/
+/* SECCIÓN INFORMACIÓN DE USUARIO */
+/* Principal*/
+.info-user{
+   display: grid;
+   grid-template-columns: 1fr 256px 1fr;
+   grid-template-rows: 1fr;
+   grid-column-gap: 10px;
+   grid-row-gap: 20px;
+   justify-items: stretch;
+   align-items: stretch;
+   margin-top:1%;
+}
+.info-user-contenido{
+   border-radius: 0;
+   border-style: solid;
+   border-width: 1px;
+   border-color:gray;
+   width: 43rem;
+   height: 20rem;
+ }
+.info-user-contenido > h3{
+   background-color: #306d9c;
+}
+.estado2{
+   border-radius: 0;
+   height: 15rem;
+   
+}
+.estado2 > h5{
+   margin-left:20px;
+   margin-right:20px;
+}
+
+@media only screen and (min-width:100px) and (max-width:800px){
+   .info-user{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 10px;
+      grid-row-gap: 20px;
+      justify-items: stretch;
+      align-items: stretch;
+      margin-top:1%;
+   }
+   .info-user-contenido{
+      border-radius: 0;
+      border-style: solid;
+      border-width: 1px;
+      border-color:gray;
+      margin-top: 20px;
+      margin-right: 10px;
+      width: 36rem;
+      height: 20rem;
+    }
+    .info-user-contenido > h5{
+      font-size: 23px;
+    }
+   .info-user-contenido > h3{
+      background-color: #306d9c;
+   }
+   .estado2{
+      border-radius: 0;
+      height: 13rem;
+      width: 17rem;
+      
+   }
+
+}
+@media only screen and (min-width:100px) and (max-width:550px){
+   .info-user{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 10px;
+      grid-row-gap: 20px;
+      justify-items: stretch;
+      align-items: stretch;
+      margin-top:1%;
+   }
+   .info-user-contenido{
+      border-radius: 0;
+      border-style: solid;
+      border-width: 1px;
+      border-color:gray;
+      margin-top: 20px;
+      margin-right: 10px;
+      width: 26rem;
+      height: 20rem;
+    }
+    .info-user-contenido > h5{
+      font-size: 23px;
+    }
+   .info-user-contenido > h3{
+      background-color: #306d9c;
+   }
+   .estado2{
+      border-radius: 0;
+      height: 13rem;
+      width: 17rem;
+      
+   }
+}
+/*********************************** FIN SECCIÓN INFORMACIÓN USUARIO **********************************************/
+/* SECCIÓN RESERVAS */

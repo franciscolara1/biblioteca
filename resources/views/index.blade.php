@@ -32,6 +32,7 @@
     <link href="{{ asset('css/register.css') }}" rel="stylesheet">
     <link href="{{ asset('css/detalle.css') }}" rel="stylesheet">
     <link href="{{ asset('css/prestamo.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     
 
     
@@ -52,11 +53,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="busqueda">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{ url('admin')}}">
                 <span style="font-size:50px;">
-                   <i class="fi fi-sr-headset" id="icon1"></i>
+                  <i class="bi bi-database-fill"style="position:relative;bottom:7px;" id="icon1"></i>
                 </span></a>
-                <a id="textMenu1"style="position:relative;right:1px;bottom:30px;"href="#">Consúltanos</a>
+                <a id="textMenu1"style="position:relative;right:1px;bottom:30px;"href="#">Administración</a>
             </li>
             @guest
             <li class="busqueda">
@@ -81,7 +82,7 @@
                 <a class="cerrar-sesión" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();"><span style="font-size:50px;position: relative;top:20px">
-                  <i class="bi bi-box-arrow-right"></i>
+                  <i class="bi bi-box-arrow-right"style="position:relative;bottom:5px;"></i>
                 </span><br>Cerrar Sesión</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                   @csrf
@@ -188,6 +189,7 @@
 @yield('detalle')
 @yield('prestamo')
 @yield('horario')
+@yield('admin')
 <script src="{{ url('js/app.js') }}"></script>
 <script src="{{ url('js/scroll.js') }}"></script>
 

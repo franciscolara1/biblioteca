@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Reserva;
+use App\Models\User;
 
 class PrestamosController extends Controller
 {
@@ -53,6 +54,7 @@ class PrestamosController extends Controller
     //Función para poder visualizar los libros prestados
     public function verPrestamos(){
         $id_user = Auth::user()->id;
+        $info_user = Auth::user();
         //Seleccionamos los libros según el usuario.
         $prestamos = Reserva::select('libros.titulo','libros.autor','reservas.fecha_inicio','reservas.fecha_termino')
             ->join('libros','reservas.id_libro','=','libros.id')
@@ -75,6 +77,9 @@ class PrestamosController extends Controller
         //**************************************************************** */
         return $prestamos->isEmpty()
             ? view('páginas.prestamo')->with('error', 'No tienes préstamos en este momento.')
-            : view('páginas.prestamo')->with(['prestamos' => $prestamos,'historialPrestamos' => $historialPrestamos]);
+            : view('páginas.prestamo')->with([
+                'prestamos' => $prestamos,
+                'historialPrestamos' => $historialPrestamos,
+                'info_user' => $info_user]);
     }
 }
