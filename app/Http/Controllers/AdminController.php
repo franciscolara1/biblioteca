@@ -29,7 +29,7 @@ class AdminController extends Controller
                 ->join('libros','libros.id','=','reservas.id_libro')
                 ->join('users','users.id','=','reservas.id_user')
                 ->orderBy('reservas.id','asc')
-                ->get();
+                ->paginate(10);
 
         foreach ($prestamos_alumnos as $prestamo) {
             $prestamo->fecha_inicio = \Carbon\Carbon::parse($prestamo->fecha_inicio);

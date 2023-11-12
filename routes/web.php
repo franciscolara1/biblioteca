@@ -56,7 +56,10 @@ Route::get('/prestamo', [PrestamosController::class, 'verPrestamos'])->name('pre
 Route::get('/horarios', [General::class, 'horarios']);
 
 //ADMINISTRADOR
-Route::get('/admin', [AdminController::class, 'gestionarPrestamosAlumnos'])->name('admin');
+Route::middleware(['role:admin'])->group(function () {
+    // Rutas que solo los administradores pueden acceder
+    Route::get('/admin', [AdminController::class, 'gestionarPrestamosAlumnos'])->name('admin');
+    Route::put('/marcar-devuelto/{id}', [AdminController::class, 'marcarDevuelto'])->name('marcar.devuelto');
+});
 
-//Registrar libro devuelto
-Route::put('/marcar-devuelto/{id}', [AdminController::class, 'marcarDevuelto'])->name('marcar.devuelto');
+

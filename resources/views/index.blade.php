@@ -52,6 +52,8 @@
           </a>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
+            @if(auth()->check() && auth()->user()->role === 'admin')
+            {{-- Contenido visible solo para administradores --}}
             <li class="busqueda">
               <a class="nav-link" href="{{ url('admin')}}">
                 <span style="font-size:50px;">
@@ -59,6 +61,7 @@
                 </span></a>
                 <a id="textMenu1"style="position:relative;right:1px;bottom:30px;"href="#">Administración</a>
             </li>
+            @endif
             @guest
             <li class="busqueda">
               <a class="nav-link" href="{{ url('login')}}">
