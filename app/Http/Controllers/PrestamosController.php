@@ -75,6 +75,7 @@ class PrestamosController extends Controller
             $historialPrestamo->deleted_at = \Carbon\Carbon::parse($historialPrestamo->fecha_termino);
         };
         //**************************************************************** */
+        
         return $prestamos->isEmpty()
             ? view('páginas.prestamo')->with('error', 'No tienes préstamos en este momento.')
             : view('páginas.prestamo')->with([
