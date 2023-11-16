@@ -18,5 +18,6 @@ class reserva extends Model
         'fecha_termino',
         'reservado',
         'deleted_at',
+        'sancion',
     ];
 }

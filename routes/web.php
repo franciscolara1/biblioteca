@@ -59,7 +59,10 @@ Route::get('/horarios', [General::class, 'horarios']);
 Route::middleware(['role:admin'])->group(function () {
     // Rutas que solo los administradores pueden acceder
     Route::get('/admin', [AdminController::class, 'gestionarPrestamosAlumnos'])->name('admin');
+    //Marcar libro devuelto
     Route::put('/marcar-devuelto/{id}', [AdminController::class, 'marcarDevuelto'])->name('marcar.devuelto');
+    //Agregar Sanción
+    Route::put('/agregar-sancion/{id}', [AdminController::class, 'sancionar'])->name('agregar.sancion');
 });
 
 

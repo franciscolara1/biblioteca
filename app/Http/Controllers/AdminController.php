@@ -7,40 +7,38 @@ use App\Models\reserva;
 
 class AdminController extends Controller
 {
-    //METODO PARA BUSCAR A LOS ALUMNOS.
-    /* 
-    public function busqueda(Request $request){
-        
-        $texto=trim($request->get('texto'));
-        $nombreCategoria = 'Resultados de búsqueda: '.$texto;
-        $libros=DB::table('libros')
-                 ->select('id','titulo','img')
-                 ->where('titulo','LIKE','%'.$texto.'%')
-                 ->orderBy('titulo','asc')
-                 ->get();
-        return view('páginas.libro',compact('libros', 'nombreCategoria'));
-    }
-    */
+    //Método para ver todos los préstamos y buscar por nombre de alumno
+    public function gestionarPrestamosAlumnos(Request $request){
 
-    //Método para ver todos los préstamos 
-    public function gestionarPrestamosAlumnos(){
-
-        $prestamos_alumnos = Reserva::select('reservas.id','reservas.fecha_inicio','reservas.fecha_termino','reservas.deleted_at','reservas.id_user','users.name','libros.titulo')
+        $query = Reserva::select('reservas.id','reservas.fecha_inicio','reservas.fecha_termino','reservas.deleted_at','reservas.id_user','reservas.sancion','users.name','libros.titulo')
                 ->join('libros','libros.id','=','reservas.id_libro')
                 ->join('users','users.id','=','reservas.id_user')
-                ->orderBy('reservas.id','asc')
-                ->paginate(10);
+                ->orderBy('reservas.id','asc');
+    
+        $sanciones = Reserva::select('reservas.id_user','reservas.sancion','users.name')
+                ->join('users','users.id','=','reservas.id_user')
+                ->orderBy('reservas.id_user','asc');
+                
+    
+        // Buscar por nombre de usuario si se proporciona un texto de búsqueda
+        if ($request->has('nombre_texto')) {
+            $texto = trim($request->get('nombre_texto'));
+            $query->where('users.name','LIKE','%'.$texto.'%');
+            $sanciones->where('users.name','LIKE','%'.$texto.'%');
+        }
+    
+        $prestamos_alumnos = $query->paginate(10);
 
+        $sanciones = $sanciones->paginate(10);
+    
         foreach ($prestamos_alumnos as $prestamo) {
             $prestamo->fecha_inicio = \Carbon\Carbon::parse($prestamo->fecha_inicio);
             $prestamo->fecha_termino = \Carbon\Carbon::parse($prestamo->fecha_termino);
-            
-        };
-
-        return view('páginas.admin',['prestamos_alumnos' => $prestamos_alumnos]);
-
-
+        }
+    
+        return view('páginas.admin',['prestamos_alumnos' => $prestamos_alumnos,'sanciones' => $sanciones]);
     }
+    
     //Marcar como devuelto
     public function marcarDevuelto($id)
     {
@@ -48,6 +46,20 @@ class AdminController extends Controller
 
     if ($reserva) {
         $reserva->update(['deleted_at' => now()]);
+        
+    }
+
+    return redirect()->route('admin'); 
+    }
+
+    //Sancionar alumno
+    public function sancionar($id)
+    {
+    
+    $reserva = Reserva::find($id);
+
+    if ($reserva) {
+        $reserva->update(['sancion' => $reserva->sancion == 1 ? 0 : 1]);
         
     }
 

@@ -59,7 +59,7 @@
                 <span style="font-size:50px;">
                   <i class="bi bi-database-fill"style="position:relative;bottom:7px;" id="icon1"></i>
                 </span></a>
-                <a id="textMenu1"style="position:relative;right:1px;bottom:30px;"href="#">Administración</a>
+                <a id="textMenu1"style="position:relative;right:1px;bottom:30px;"href="{{ url('admin')}}">Administración</a>
             </li>
             @endif
             @guest
