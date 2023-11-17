@@ -52,8 +52,6 @@
     </script>
     @endif
 
-    <div> </div>
-
   <!--Mensaje de newsletter al ingresar correo existente -->
             @if(session('success'))
               <div class="alert alert-success text-center" id="mensaje-newsletter">
