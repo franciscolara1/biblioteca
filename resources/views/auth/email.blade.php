@@ -13,7 +13,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">-->
-                <div class="card-header">{{ __('Reestablecimiento de contraseña') }}</div>
+                <div class="card-header">
+                    <h4>{{ __('Reestablecimiento de contraseña') }}</h4>
+
+                    </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -41,8 +44,8 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
+                            <button type="submit" class="btn btn-warning w-100 font-weight-bold mt-2 mb-5">
+                                    {{ __('Enviar enlace de reestablecimiento de contraseña') }}
                                 </button>
                             </div>
                         </div>
