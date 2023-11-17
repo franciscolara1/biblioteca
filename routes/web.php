@@ -20,21 +20,17 @@ use App\Http\Controllers\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/* Página Principal 
-Route::get('/', function () {
-    return view('páginas.principal');
-});
-*/
+//PAGINA PRINCIPAL
 Route::get('/' , [LibrosController::class, 'mostrarResultados']);
 /* Login */
 Route::get('/login', function () {
     return view('páginas.login');
 });
-
+//FILTROS LIBROS
 Route::get('/libro/{categoria_id}', [FiltrosController::class, 'filtro']);
-
+//BUSQUEDA
 Route::get('/libro', [FiltrosController::class,'busqueda'])->name('libro');
-
+//REGISTRO
 Route::get('/register', function () {
     return view('auth.register');
 });
@@ -66,5 +62,8 @@ Route::middleware(['role:admin'])->group(function () {
     //Insertar Deuda
     Route::post('/admin', [AdminController::class, 'insertar_deuda'])->name('admin');
 });
+
+//SANCIONES
+
 
 

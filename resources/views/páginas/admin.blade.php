@@ -101,10 +101,13 @@
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">Id_reserva</th>
-                <th scope="col">Nombre_alumno</th>
+                <th scope="col">Id reserva</th>
+                <th scope="col">Nombre alumno</th>
                 <th scope="col">Bloqueo</th>
+                <th scope="col"></th>
                 <th scope="col">Monto</th>
+                <th scope="col">Ingresar Deuda</th>
+                <th scope="col">Estado</th>
               </tr>
             </thead>
             <tbody>
@@ -138,10 +141,12 @@
                   @endif 
                 </td>
                 <td>
-                  
-                  
+                  @if ($sancion->deleted_at)
                     <button type="submit" class="btn btn-danger">Ingresar deuda</button>
-                  </form>
+                  @else
+                    <td>No tiene deudas</td>
+                  @endif
+                </form>
                 </td>
               </tr>
               @empty

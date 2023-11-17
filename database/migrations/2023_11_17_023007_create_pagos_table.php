@@ -15,9 +15,10 @@ class CreatePagosTable extends Migration
     {
         Schema::create('pagos', function (Blueprint $table) {
             $table->id();
-            $table->integer('monto');
-            $table->string('tipo_pago');
-            $table->date('fecha_pago');
+            $table->string('session_id');
+            $table->float('total', 9, 2);
+            $table->tinyInteger('status')->comment('1:Pendiente. 2:Aprobada.')->default(1);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
