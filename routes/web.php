@@ -63,6 +63,8 @@ Route::middleware(['role:admin'])->group(function () {
     Route::put('/marcar-devuelto/{id}', [AdminController::class, 'marcarDevuelto'])->name('marcar.devuelto');
     //Agregar Sanción
     Route::put('/agregar-sancion/{id}', [AdminController::class, 'sancionar'])->name('agregar.sancion');
+    //Insertar Deuda
+    Route::post('/admin', [AdminController::class, 'insertar_deuda'])->name('admin');
 });
 
 

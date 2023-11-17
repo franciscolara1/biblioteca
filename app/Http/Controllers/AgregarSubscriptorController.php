@@ -16,7 +16,7 @@ class AgregarSubscriptorController extends Controller
         ); 
 
         return redirect()->route('/');
-}
+    }
 
 }
 
