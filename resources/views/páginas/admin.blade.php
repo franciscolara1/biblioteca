@@ -16,6 +16,11 @@
       </div>
     </form>
   </div>
+  @if(session('success'))
+              <div id="successMessage" class="alert alert-success">
+                  {{ session('success') }}
+              </div>
+  @endif
   <div class="d-flex align-items-start bg-white menu-admin">
       <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Préstamos Alumnos</button>
@@ -96,7 +101,7 @@
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">ID</th>
+                <th scope="col">Id_reserva</th>
                 <th scope="col">Nombre_alumno</th>
                 <th scope="col">Bloqueo</th>
                 <th scope="col">Monto</th>
@@ -107,7 +112,7 @@
               @forelse ($sanciones as $sancion)
               <!-- Mostrar información del préstamo -->
               <tr>
-                <th scope="row">{{ $prestamo->id_user }}</th>
+                <th scope="row">{{ $sancion->id }}</th>
                 <td>{{ $sancion->name }}</td>
                 <td>
                   @if($sancion->sancion == 1)
@@ -115,6 +120,28 @@
                   @else
                   No
                   @endif
+                </td>
+                <form action="{{ route('admin')}}" method="post">
+                @csrf
+                <input type="number" name="dias_restantes" value="{{ $sancion->dias_restantes }}" hidden>
+                <input type="number" name="id_user" value="{{ $sancion->id_user }}" hidden>
+                <input type="number" name="valor" value="{{ $sancion->dias_restantes * 100 }}" hidden>
+                <td>
+                  @if($sancion->deleted_at)
+                      @if($sancion->dias_restantes >= 0)
+                          <td style="color:red">${{ $sancion->dias_restantes * 100 }} CLP</td>
+                      @else
+                          <td>No tiene una multa</td>
+                      @endif
+                  @else
+                      <td>No tiene una multa</td>
+                  @endif 
+                </td>
+                <td>
+                  
+                  
+                    <button type="submit" class="btn btn-danger">Ingresar deuda</button>
+                  </form>
                 </td>
               </tr>
               @empty
@@ -127,6 +154,12 @@
           <div style="margin-left:60%">
             {{ $sanciones->links() }}
           </div>
+          <script>
+            // Espera 5 segundos (5000 milisegundos) y luego oculta el mensaje
+            setTimeout(function() {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000); // 5000 milisegundos = 5 segundos
+         </script>
         </div>
           <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
           <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>

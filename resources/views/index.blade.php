@@ -50,6 +50,10 @@
           <a class="navbar-brand" href="{{ url('') }}">
             <img src="{{ url('img/Logo_duoc.png') }}" width="300" height="70" class="d-inline-block logo-duoc"alt="">
           </a>
+          @auth
+        <h5 style="position: relative;top:10px;color:white;">Bienvenido {{ Auth::user()-> name }},
+        <br>de la {{ Auth::user()-> carrera}}.</h5>
+        @endauth
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             @if(auth()->check() && auth()->user()->role === 'admin')
@@ -100,10 +104,6 @@
                 <a id="textMenu5"style="position:relative;right:1px;bottom:30px;"href="{{ url('horarios')}}">Horarios</a>
               </li>
           </ul>
-          @auth
-        <h5 style="position: relative;right:25rem;top:10px;color:white;margin-right:4rem">Bienvenido {{ Auth::user()-> name }},
-        <br>de la {{ Auth::user()-> carrera}}.</h5>
-        @endauth
         </div>
         <button class="btn btn-warning"id="abrir">
           <i class="bi bi-list" id="burguer"></i>

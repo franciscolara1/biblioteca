@@ -6,6 +6,7 @@ use App\Http\Controllers\LibrosController;
 use App\Http\Controllers\FiltrosController;
 use App\Http\Controllers\AgregarSubscriptorController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\General;
 use App\Http\Controllers\PrestamosController;
 use App\Http\Controllers\AdminController;
@@ -39,6 +40,10 @@ Route::get('/register', function () {
     return view('auth.register');
 });
 
+Route::get('/resetpassword', function () {
+    return view('auth.email');
+});
+
 //Rutas para mostrar libros según id.
 Route::get('/detalleLibro/{id}', [FiltrosController::class, 'detalle'])->name('detalleLibro');
 Route::post('/detalleLibro/{id}', [PrestamosController::class, 'prestamo'])->name('detalleLibro.prestar');
@@ -63,6 +68,8 @@ Route::middleware(['role:admin'])->group(function () {
     Route::put('/marcar-devuelto/{id}', [AdminController::class, 'marcarDevuelto'])->name('marcar.devuelto');
     //Agregar Sanción
     Route::put('/agregar-sancion/{id}', [AdminController::class, 'sancionar'])->name('agregar.sancion');
+    //Insertar Deuda
+    Route::post('/admin', [AdminController::class, 'insertar_deuda'])->name('admin');
 });
 
 
