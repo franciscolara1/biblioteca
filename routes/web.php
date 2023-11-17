@@ -6,6 +6,7 @@ use App\Http\Controllers\LibrosController;
 use App\Http\Controllers\FiltrosController;
 use App\Http\Controllers\AgregarSubscriptorController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\General;
 use App\Http\Controllers\PrestamosController;
 use App\Http\Controllers\AdminController;
@@ -37,6 +38,10 @@ Route::get('/libro', [FiltrosController::class,'busqueda'])->name('libro');
 
 Route::get('/register', function () {
     return view('auth.register');
+});
+
+Route::get('/resetpassword', function () {
+    return view('auth.email');
 });
 
 //Rutas para mostrar libros según id.

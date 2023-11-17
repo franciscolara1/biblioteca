@@ -58,11 +58,14 @@
                             <button type="submit" class="btn btn-dark w-100 font-weight-bold mt-2 boton-inicio-sesion">
                                 {{ __('Ingresar') }}
                             </button>
-                            @if (Route::has('password.request'))
+
+                            <a href="{{url('/resetpassword')}}">¿No recuerdas tu contraseña? reestablece aca!</a>    
+                        
+                            <!--@if (Route::has('password.request'))
                             <a class="btn btn-link" href="{{ route('password.request') }}">
                                 {{ __('Forgot Your Password?') }}
                             </a>
-                            @endif
+                            @endif -->
                         </div>
                     </div>
                 </form>
