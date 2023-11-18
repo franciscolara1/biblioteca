@@ -21,3 +21,16 @@ abrir.addEventListener("click", () => {
 cerrar.addEventListener("click", () => {
     nav.classList.remove("visible");
 })
+
+function validarNewsletter() {
+    var suscriptor = document.forms["newsletter"]["subscriptor"].value;
+
+    if (suscriptor == "") {
+        alert("Campo vacio. Por favor, Ingresa tu dirección de correo electronico");
+        return false; // Evita que el formulario se envíe
+    }
+
+    // Puedes agregar más validaciones según tus necesidades
+
+    return true; // Permite que el formulario se envíe
+}
