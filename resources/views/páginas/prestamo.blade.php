@@ -40,14 +40,9 @@
               <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Escuela: </span>{{$info_user-> carrera}}</h5>
               <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Correo: </span>{{$info_user-> email}}</h5>
           </section>
-          <aside class="card estado2">
-            <h5 class="mt-2">Su estado:</h5>
-            <h5 class="sanciones">Sanciones</h5>
-            <p class="debido">Total debido:</p>
-        </aside>
         </div>
     </div>
-    <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+    <div class="tab-pane fade show active"id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
       <div class="container ficha">
         <section class="ficha-principal bg-white">
             <h3 class="container text-white">Préstamos</h3>
@@ -109,11 +104,6 @@
                 </tbody>
               </table>
         </section>
-        <aside class="card estado">
-            <h5 class="mt-2">Su estado:</h5>
-            <h5 class="sanciones">Sanciones</h5>
-            <p class="debido">Total debido:</p>
-        </aside>
       </div>
     </div>
     <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
@@ -178,25 +168,40 @@
                 </tbody>
               </table>
         </section>
-        <aside class="card estado">
-          <h5 class="mt-2">Su estado:</h5>
-          <h5 class="sanciones">Sanciones</h5>
-          <p class="debido">Total debido:</p>
-      </aside>
       </div>
     </div>
     <div class="tab-pane fade" id="sanciones-tab-pane" role="tabpanel" aria-labelledby="sanciones-tab" tabindex="0">
       <div class="container info-user">
         <section class="info-user-contenido bg-white">
             <h3 class="container text-white">Sanciones</h3>
-            <h5 class="mt-5" style="margin-left:2rem;"><span style="font-weight:bold;">¿Bloqueado actualmente?: </span>{{$info_user-> name}}</h5>
-            <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Total adeudado: </span>{{$info_user-> carrera}}</h5>
-            <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Bloqueos acumulados: </span>{{$info_user-> email}}</h5>
+            <h5 class="mt-5" style="margin-left:2rem;"><span style="font-weight:bold;">¿Bloqueado actualmente?: </span>
+              @if($mostrar_sanciones-> dias_mora > 0)
+              Si
+              @else
+              No
+              @endif 
+            </h5>
+            <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Dias de atraso: </span>{{$mostrar_sanciones-> dias_mora}}</h5>
+            <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Valor a pagar: </span>${{$mostrar_sanciones-> valor}} CLP</h5>
         </section>
         <aside class="card estado2">
-          <h5 class="mt-2">Su estado:</h5>
+          <h5 class="mt-2">Su estado: 
+            @if ($mostrar_sanciones-> dias_mora > 0)
+            Bloqueado
+            @else
+            Ok
+            @endif
+          </h5>
           <h5 class="sanciones">Sanciones</h5>
-          <p class="debido">Total debido:</p>
+          <p class="debido">Total debido: ${{ $mostrar_sanciones-> valor }} CLP</p>
+          @if ($mostrar_sanciones-> dias_mora > 0)
+          <form method="POST" action="{{ route('iniciar_compra') }}">
+            @csrf
+            <input type="number" name="valor" value="{{ $mostrar_sanciones-> valor}}" hidden>
+            <!-- Otros campos del formulario -->
+            <button type="submit">Enviar</button>
+          </form>
+          @endif
       </aside>
       </div>
     </div>

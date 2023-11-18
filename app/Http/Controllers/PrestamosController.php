@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Reserva;
 use App\Models\User;
+use App\Models\Morocidade;
+
 
 class PrestamosController extends Controller
 {
@@ -65,6 +68,10 @@ class PrestamosController extends Controller
         ->where('reservas.id_user', $id_user)
         ->whereNotNull('reservas.deleted_at')
         ->get();
+        $mostrar_sanciones = Morocidade::select('morocidades.dias_mora','morocidades.valor','users.id')
+                            ->join('users','users.id','=','morocidades.id_usuario')
+                            ->where('users.id',$id_user)
+                            ->first();
         // Convertir las fechas en objetos Carbon para poder ver solo dia/mes/año.
         foreach ($prestamos as $prestamo) {
             $prestamo->fecha_inicio = \Carbon\Carbon::parse($prestamo->fecha_inicio);
@@ -75,11 +82,13 @@ class PrestamosController extends Controller
             $historialPrestamo->deleted_at = \Carbon\Carbon::parse($historialPrestamo->fecha_termino);
         };
         //**************************************************************** */
+        
         return $prestamos->isEmpty()
             ? view('páginas.prestamo')->with('error', 'No tienes préstamos en este momento.')
             : view('páginas.prestamo')->with([
                 'prestamos' => $prestamos,
                 'historialPrestamos' => $historialPrestamos,
-                'info_user' => $info_user]);
+                'info_user' => $info_user,
+                'mostrar_sanciones' => $mostrar_sanciones]);
     }
 }

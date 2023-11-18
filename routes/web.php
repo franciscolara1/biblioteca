@@ -6,6 +6,7 @@ use App\Http\Controllers\LibrosController;
 use App\Http\Controllers\FiltrosController;
 use App\Http\Controllers\AgregarSubscriptorController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\General;
 use App\Http\Controllers\PrestamosController;
 use App\Http\Controllers\AdminController;
@@ -20,23 +21,23 @@ use App\Http\Controllers\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/* Página Principal 
-Route::get('/', function () {
-    return view('páginas.principal');
-});
-*/
+//PAGINA PRINCIPAL
 Route::get('/' , [LibrosController::class, 'mostrarResultados']);
 /* Login */
 Route::get('/login', function () {
     return view('páginas.login');
 });
-
+//FILTROS LIBROS
 Route::get('/libro/{categoria_id}', [FiltrosController::class, 'filtro']);
-
+//BUSQUEDA
 Route::get('/libro', [FiltrosController::class,'busqueda'])->name('libro');
-
+//REGISTRO
 Route::get('/register', function () {
     return view('auth.register');
+});
+
+Route::get('/resetpassword', function () {
+    return view('auth.email');
 });
 
 //Rutas para mostrar libros según id.
@@ -63,6 +64,11 @@ Route::middleware(['role:admin'])->group(function () {
     Route::put('/marcar-devuelto/{id}', [AdminController::class, 'marcarDevuelto'])->name('marcar.devuelto');
     //Agregar Sanción
     Route::put('/agregar-sancion/{id}', [AdminController::class, 'sancionar'])->name('agregar.sancion');
+    //Insertar Deuda
+    Route::post('/admin', [AdminController::class, 'insertar_deuda'])->name('admin');
 });
+
+//SANCIONES
+
 
 
