@@ -195,7 +195,12 @@
           <h5 class="sanciones">Sanciones</h5>
           <p class="debido">Total debido: ${{ $mostrar_sanciones-> valor }} CLP</p>
           @if ($mostrar_sanciones-> dias_mora > 0)
-          <button onclick="window.location='{{ route('iniciar_compra') }}'" class="btn btn-primary">Pagar</button>
+          <form method="POST" action="{{ route('iniciar_compra') }}">
+            @csrf
+            <input type="number" name="valor" value="{{ $mostrar_sanciones-> valor}}" hidden>
+            <!-- Otros campos del formulario -->
+            <button type="submit">Enviar</button>
+          </form>
           @endif
       </aside>
       </div>

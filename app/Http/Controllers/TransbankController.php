@@ -27,7 +27,7 @@ class TransbankController extends Controller
     {
         $nueva_compra = new Pago();
         $nueva_compra->session_id = 1234;
-        $nueva_compra->total = 1234;
+        $nueva_compra->total = $request->get('valor');
         $nueva_compra->status = 1; //Estado inicial
         $nueva_compra->save();
         $url_to_pay = self::start_web_pay_plus_transaction($nueva_compra);

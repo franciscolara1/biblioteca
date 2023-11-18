@@ -22,4 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //TRANSBANK
 Route::post('/iniciar_compra',[TransbankController::class,'iniciar_compra'])->name('iniciar_compra');
 Route::get('/iniciar_compra',[TransbankController::class,'iniciar_compra'])->name('iniciar_compra');
-Route::post('/confirmar_pago',[TransbankController::class,'confirmar_pago'])->name('confirmar_pago');
+Route::any('/confirmar_pago',[TransbankController::class,'confirmar_pago'])->name('confirmar_pago');
