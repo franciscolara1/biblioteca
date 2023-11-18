@@ -199,7 +199,7 @@
             @csrf
             <input type="number" name="valor" value="{{ $mostrar_sanciones-> valor}}" hidden>
             <!-- Otros campos del formulario -->
-            <button type="submit">Enviar</button>
+            <button class="btn btn-success"type="submit" style="width: 16rem">Pagar</button>
           </form>
           @endif
       </aside>
