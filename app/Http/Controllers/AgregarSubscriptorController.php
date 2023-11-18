@@ -12,11 +12,8 @@ class AgregarSubscriptorController extends Controller
     {
 
         Newsletter::create([
-            'email' => $request->get('subscriptor')]
-        ); 
-
-        return redirect()->route('/');
-    }
-
+            'email' => $email]); 
+        return redirect()->route('/')->with('success', 'Correo registrado correctamente');}
 }
 
+}
