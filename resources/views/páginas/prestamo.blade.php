@@ -195,7 +195,7 @@
           <h5 class="sanciones">Sanciones</h5>
           <p class="debido">Total debido: ${{ $mostrar_sanciones-> valor }} CLP</p>
           @if ($mostrar_sanciones-> dias_mora > 0)
-          <button class="btn btn-primary">Pagar</button>
+          <button onclick="window.location='{{ route('iniciar_compra') }}'" class="btn btn-primary">Pagar</button>
           @endif
       </aside>
       </div>
