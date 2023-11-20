@@ -36,9 +36,9 @@
         <div class="container info-user">
           <section class="info-user-contenido bg-white">
               <h3 class="text-white">Información Alumno</h3>
-              <h5 class="mt-5" style="margin-left:2rem;"><span style="font-weight:bold;">Nombre de alumno: </span>{{$info_user-> name}}</h5>
-              <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Escuela: </span>{{$info_user-> carrera}}</h5>
-              <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Correo: </span>{{$info_user-> email}}</h5>
+              <h5 class="mt-5" style="margin-left:2rem;"><span style="font-weight:bold;">Nombre de alumno: </span>{{Auth::user()-> name}}</h5>
+              <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Escuela: </span>{{Auth::user()-> carrera}}</h5>
+              <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Correo: </span>{{Auth::user()-> email}}</h5>
           </section>
         </div>
     </div>
@@ -173,36 +173,46 @@
     <div class="tab-pane fade" id="sanciones-tab-pane" role="tabpanel" aria-labelledby="sanciones-tab" tabindex="0">
       <div class="container info-user">
         <section class="info-user-contenido bg-white">
-            <h3 class="container text-white">Sanciones</h3>
-            <h5 class="mt-5" style="margin-left:2rem;"><span style="font-weight:bold;">¿Bloqueado actualmente?: </span>
-              @if($mostrar_sanciones-> dias_mora > 0)
-              Si
-              @else
-              No
-              @endif 
-            </h5>
-            <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Dias de atraso: </span>{{$mostrar_sanciones-> dias_mora}}</h5>
-            <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Valor a pagar: </span>${{$mostrar_sanciones-> valor}} CLP</h5>
-        </section>
-        <aside class="card estado2">
-          <h5 class="mt-2">Su estado: 
-            @if ($mostrar_sanciones-> dias_mora > 0)
-            Bloqueado
-            @else
-            Ok
-            @endif
-          </h5>
-          <h5 class="sanciones">Sanciones</h5>
-          <p class="debido">Total debido: ${{ $mostrar_sanciones-> valor }} CLP</p>
-          @if ($mostrar_sanciones-> dias_mora > 0)
-          <form method="POST" action="{{ route('iniciar_compra') }}">
-            @csrf
-            <input type="number" name="valor" value="{{ $mostrar_sanciones-> valor}}" hidden>
-            <!-- Otros campos del formulario -->
-            <button class="btn btn-success"type="submit" style="width: 16rem">Pagar</button>
-          </form>
+          <h3 class="container text-white">Sanciones</h3>
+          @if(isset($mostrar_sanciones))
+              <h5 class="mt-5" style="margin-left:2rem;">
+                  <span style="font-weight:bold;">¿Bloqueado actualmente?: </span>
+                  @if($mostrar_sanciones->dias_mora > 0)
+                      Si
+                  @else
+                      No
+                  @endif 
+              </h5>
+              <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Dias de atraso: </span>{{$mostrar_sanciones->dias_mora}}</h5>
+              <h5 class="mt-2" style="margin-left:2rem;"><span style="font-weight:bold;">Valor a pagar: </span>${{$mostrar_sanciones->valor}} CLP</h5>
+          @else
+              <p>No hay sanciones disponibles.</p>
           @endif
-      </aside>
+      </section>
+      <aside class="card estado2">
+        @if(isset($mostrar_sanciones))
+            <h5 class="mt-2">Su estado: 
+                @if ($mostrar_sanciones->dias_mora > 0)
+                    Bloqueado
+                @else
+                    Ok
+                @endif
+            </h5>
+            <h5 class="sanciones">Sanciones</h5>
+            <p class="debido">Total debido: ${{ $mostrar_sanciones->valor }} CLP</p>
+            @if ($mostrar_sanciones->dias_mora > 0)
+                <form method="POST" action="{{ route('iniciar_compra') }}">
+                    @csrf
+                    <input type="number" name="valor" value="{{ $mostrar_sanciones->valor }}" hidden>
+                    <!-- Otros campos del formulario -->
+                    <button class="btn btn-success" type="submit" style="width: 16rem">Pagar</button>
+                </form>
+            @endif
+        @else
+            <h5 class="mt-2">Su estado: Ok
+            </h5>
+        @endif
+    </aside>
       </div>
     </div>
   </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pago;
+use App\Models\Morocidade;
 use Illuminate\Http\Request;
 use Transbank\Webpay\WebpayPlus;
 use Transbank\Webpay\WebpayPlus\Transaction;
@@ -51,9 +52,11 @@ class TransbankController extends Controller
 
     public function confirmar_pago(Request $request)
     {
+        //$id_user = Auth::user()->id;
         $confirmacion = (new Transaction)->commit($request->post('token_ws'));
 
         $compra = Pago::where('id', $confirmacion->buyOrder)->first();
+        //quitar_mora = Morocidade::
 
         if($confirmacion->isApproved()) {
             $compra->status = 2; //Aprobada

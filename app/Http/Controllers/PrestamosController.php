@@ -72,6 +72,11 @@ class PrestamosController extends Controller
                             ->join('users','users.id','=','morocidades.id_usuario')
                             ->where('users.id',$id_user)
                             ->first();
+
+        // Si no hay sanciones, proporciona un valor predeterminado o establece $mostrar_sanciones como nulo.
+        if (!$mostrar_sanciones) {
+            $mostrar_sanciones = (object)['dias_mora' => 0, 'valor' => 0, 'id' => $id_user];
+        }
         // Convertir las fechas en objetos Carbon para poder ver solo dia/mes/año.
         foreach ($prestamos as $prestamo) {
             $prestamo->fecha_inicio = \Carbon\Carbon::parse($prestamo->fecha_inicio);
