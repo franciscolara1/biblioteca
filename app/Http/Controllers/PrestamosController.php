@@ -68,7 +68,7 @@ class PrestamosController extends Controller
         ->where('reservas.id_user', $id_user)
         ->whereNotNull('reservas.deleted_at')
         ->get();
-        $mostrar_sanciones = Morocidade::select('morocidades.dias_mora','morocidades.valor','users.id')
+        $mostrar_sanciones = Morocidade::select('morocidades.dias_mora','morocidades.valor','morocidades.id_usuario','users.id')
                             ->join('users','users.id','=','morocidades.id_usuario')
                             ->where('users.id',$id_user)
                             ->first();
