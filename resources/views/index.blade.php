@@ -34,7 +34,7 @@
     <link href="{{ asset('css/prestamo.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     <link href="{{ asset('css/boleta.css') }}" rel="stylesheet">
-    
+    <link href="{{ asset('css/chatbot.css') }}" rel="stylesheet">
 
     
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
