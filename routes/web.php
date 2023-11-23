@@ -68,7 +68,10 @@ Route::middleware(['role:admin'])->group(function () {
     Route::post('/admin', [AdminController::class, 'insertar_deuda'])->name('admin');
 });
 
-//SANCIONES
+//Boleta
+Route::get('/boleta', function () {
+    return view('páginas.boleta');
+});
 
 
 

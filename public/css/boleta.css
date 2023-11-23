@@ -1,0 +1,39 @@
+.boleta{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding-top: 1px;
+    width: 50rem;
+    height: 45rem;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+.contenido-boleta{
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.logo-transbank{
+    position: relative;
+    margin-top: 5%;
+    margin-left:25%;
+    margin-right: auto;
+}
+.titulo-boleta{
+    text-align: center;
+    margin-top: 5%;
+}
+.subtitulo-boleta{
+    text-align: justify;
+    margin-top:30px;
+}
+.boleta > .contenido-boleta > hr {
+    border-top: 1px dashed grey;
+}
+.boleta > .contenido-boleta > h5 {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-boleta{
+    text-align: center;
+    margin-top: 25%;
+}
