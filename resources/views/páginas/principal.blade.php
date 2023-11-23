@@ -166,6 +166,35 @@
   <button class="btn btn-warning button-arrow-right6"><i class="bi bi-chevron-right arrow-icon-right6"></i></button>
 </div>
 
+
+<div >
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" >
+  <img class="imgchat" src="https://www.un.org/sites/un2.un.org/files/2020/08/chat.png" alt="">
+  </button>
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Bienvenido a nuestro chatbot</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+    <div class="bodychat">
+      <div class="chat-container">
+        <div class="chat-header">
+          <h1>Innovatin</h1>
+        </div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-footer">
+          <input class="inputchat" type="text" id="mensaje" placeholder="Escribe un mensaje...">
+          <button class="buttonchat" onclick="enviarMensaje()">Enviar</button>
+        </div>
+      </div>
+      <script src="script.js"></script>
+    </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- ********** NEWSLETTERS ********** -->
 
 <div class="newsletter mt-5 mb-5" style="text-align:center;">
