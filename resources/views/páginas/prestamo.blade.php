@@ -204,6 +204,7 @@
                 <form method="POST" action="{{ route('iniciar_compra') }}">
                     @csrf
                     <input type="number" name="valor" value="{{ $mostrar_sanciones->valor }}" hidden>
+                    <input type="number" name="id_sesion" value="{{ $mostrar_sanciones->id_usuario }}" hidden>
                     <!-- Otros campos del formulario -->
                     <button class="btn btn-success" type="submit" style="width: 16rem">Pagar</button>
                 </form>

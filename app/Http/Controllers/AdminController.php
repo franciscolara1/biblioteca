@@ -23,7 +23,7 @@ class AdminController extends Controller
                     'reservas.fecha_termino',
                     'reservas.deleted_at',
                     'users.name',
-                    'reservas.id_user',
+                    'reservas.id_user',                   
                     \DB::raw('(COALESCE(DAY(reservas.deleted_at) - DAY(reservas.fecha_termino))) AS dias_restantes')
                 )
                 ->join('users', 'users.id', '=', 'reservas.id_user')

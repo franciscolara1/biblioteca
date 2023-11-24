@@ -33,6 +33,7 @@
     <link href="{{ asset('css/detalle.css') }}" rel="stylesheet">
     <link href="{{ asset('css/prestamo.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/boleta.css') }}" rel="stylesheet">
     <link href="{{ asset('css/chatbot.css') }}" rel="stylesheet">
 
     
@@ -51,7 +52,7 @@
             <img src="{{ url('img/Logo_duoc.png') }}" width="300" height="70" class="d-inline-block logo-duoc"alt="">
           </a>
           @auth
-        <h5 style="position: relative;top:10px;color:white;">Bienvenido {{ Auth::user()-> name }},
+        <h5 class="collapse navbar-collapse"style="position: relative;top:10px;color:white;">Bienvenido {{ Auth::user()-> name }},
         <br>de la {{ Auth::user()-> carrera}}.</h5>
         @endauth
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -193,6 +194,7 @@
 @yield('prestamo')
 @yield('horario')
 @yield('admin')
+@yield('boleta')
 <script src="{{ url('js/app.js') }}"></script>
 <script src="{{ url('js/scroll.js') }}"></script>
 

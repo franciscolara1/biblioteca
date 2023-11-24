@@ -27,7 +27,7 @@ class TransbankController extends Controller
     public function iniciar_compra(Request $request)
     {
         $nueva_compra = new Pago();
-        $nueva_compra->session_id = 1234;
+        $nueva_compra->session_id = $request->get('id_sesion');
         $nueva_compra->total = $request->get('valor');
         $nueva_compra->status = 1; //Estado inicial
         $nueva_compra->save();
@@ -52,16 +52,26 @@ class TransbankController extends Controller
 
     public function confirmar_pago(Request $request)
     {
-        //$id_user = Auth::user()->id;
         $confirmacion = (new Transaction)->commit($request->post('token_ws'));
 
         $compra = Pago::where('id', $confirmacion->buyOrder)->first();
-        //quitar_mora = Morocidade::
+        /*
+        $quitar_mora = Morocidade::where('id_usuario',$compra->session_id)->get();
+        $quitar_mora->dias_mora= 0;
+        $quitar_mora->valor = 0;
+        $quitar_mora->update();
+        Morocidade::where('id_usuario', $compra->session_id)->update([
+            'dias_mora' => 0,
+            'valor' => 0,
+        ]);
+        */
+        // Actualizar múltiples filas con el mismo id_usuario
+        Morocidade::where('id_usuario', $compra->session_id)->delete();
 
         if($confirmacion->isApproved()) {
             $compra->status = 2; //Aprobada
             $compra->update();
-
+            
             return redirect(env('URL_FRONTEND_AFTER_PAYMENT')."?compra_id={$compra->id}" );
 
         } else {
