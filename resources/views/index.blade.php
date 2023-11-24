@@ -197,6 +197,7 @@
 @yield('boleta')
 <script src="{{ url('js/app.js') }}"></script>
 <script src="{{ url('js/scroll.js') }}"></script>
+<script src="{{ url('js/chatbot.js') }}"></script>
 
 </body>
 </html>

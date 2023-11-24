@@ -258,23 +258,23 @@
 
 
 <!-- ********** CHTABOT 3 ********** -->
-<button class="buttonchat" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+<button class="buttonchat" id="chat1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
 <img class="imgchat" src="https://www.un.org/sites/un2.un.org/files/2020/08/chat.png" alt="">
 </button>
 
 
-<div style="background-color:  #002366;" class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+<div style="background-color:  #002366;" class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
     
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onclick="limpiarChat()"></button>
   </div>
   <div class="offcanvas-body" >
     <div style="background-color: white;">
-      <button class="buttonchat" onclick="iniciarChat()">Iniciar Chatbot</button>
+      <button class="buttonchat" id="chat2" onclick="iniciarChat()">Iniciar Chatbot</button>
       <div id="chat-container">
         <div id="chat-output"></div>
         <input type="text" id="user-input" placeholder="Ingresa tu opción">
-        <button class="buttonchat" onclick="enviarRespuesta()">Enviar</button>
+        <button class="buttonchat" id="chat3" onclick="enviarRespuesta()">Enviar</button>
       </div>
       </div>
     </div>

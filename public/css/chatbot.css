@@ -14,6 +14,7 @@
     width: 400px;
     border: 1px solid #420909;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    scroll-behavior: smooth;
 }
 
 .chat-header {
@@ -55,6 +56,7 @@
     
 }
 
+
 .imgchat {
     width: 40px;
     height: 40px;
@@ -63,3 +65,47 @@
 .chatstyle {
     background-color: #002366;
 }
+
+#chat1 {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#chat2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;    
+}
+
+#chat3 {
+    display: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#user-input {
+    display: none;
+    margin-left: 20px;
+    margin-right: 20px;    
+}
+
+#offcanvasScrolling
+{
+    max-height: 450px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    top: 750px; /* Ajusta el margen inferior según tus necesidades */
+    border: 2px solid yellow;
+}
+
+.btn-close
+{
+    background-color:#FFD400;
+}
+
