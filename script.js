@@ -1,4 +1,4 @@
-function enviarMensaje() {
+/*function enviarMensaje() {
     var mensaje = document.getElementById('mensaje').value;
 
     // Agregar el mensaje del usuario al historial del chat
@@ -34,3 +34,5 @@ function agregarMensaje(usuario, mensaje) {
     // Desplazar la vista hacia abajo para mostrar el último mensaje
     chatBody.scrollTop = chatBody.scrollHeight;
 }
+
+*/
