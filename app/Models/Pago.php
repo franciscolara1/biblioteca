@@ -11,6 +11,7 @@ class Pago extends Model
     protected $fillable = [
         'session_id',
         'total',
-        'status', // Agregar esta columna
+        'status',
+        'token_ws' // Agregar esta columna
     ];
 }

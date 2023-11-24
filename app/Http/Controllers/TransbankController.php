@@ -52,31 +52,33 @@ class TransbankController extends Controller
 
     public function confirmar_pago(Request $request)
     {
+        $token_ws = $request->post('token_ws');
         $confirmacion = (new Transaction)->commit($request->post('token_ws'));
 
         $compra = Pago::where('id', $confirmacion->buyOrder)->first();
-        /*
-        $quitar_mora = Morocidade::where('id_usuario',$compra->session_id)->get();
-        $quitar_mora->dias_mora= 0;
-        $quitar_mora->valor = 0;
-        $quitar_mora->update();
-        Morocidade::where('id_usuario', $compra->session_id)->update([
-            'dias_mora' => 0,
-            'valor' => 0,
-        ]);
-        */
         // Actualizar múltiples filas con el mismo id_usuario
-        Morocidade::where('id_usuario', $compra->session_id)->delete();
-
-        if($confirmacion->isApproved()) {
-            $compra->status = 2; //Aprobada
-            $compra->update();
-            
-            return redirect(env('URL_FRONTEND_AFTER_PAYMENT')."?compra_id={$compra->id}" );
-
+        if ($compra) {
+            // Actualizar múltiples filas con el mismo id_usuario
+            Morocidade::where('id_usuario', $compra->session_id)->delete();
+    
+            // Actualizar datos en la tabla de pagos
+            $compra->update([
+                'token_ws' => $token_ws,
+                // Otros campos que desees actualizar
+            ]);
+    
+            if ($confirmacion->isApproved()) {
+                $compra->status = 2; // Aprobada
+                $compra->update();
+    
+                return redirect(env('URL_FRONTEND_AFTER_PAYMENT') . "?compra_id={$compra->id}");
+            } else {
+                // Fallida o Rechazada....
+                return redirect(env('URL_FRONTEND_AFTER_PAYMENT') . "?compra_id={$compra->id}");
+            }
         } else {
-            //Fallida o Rechazada....
-            return redirect(env('URL_FRONTEND_AFTER_PAYMENT')."?compra_id={$compra->id}" );
+            // La compra no existe
+            return redirect(env('URL_FRONTEND_AFTER_PAYMENT'))->with('error', 'Compra no encontrada');
         }
 
     }
