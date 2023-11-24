@@ -23,7 +23,7 @@
             <h5 style="font-weight: bold">Monto Total<span class="text-success">${{$compra->total}}</span></h5>
             <hr/>
             @else
-            <   p>Compra no encontrada.</p>
+                <p>Compra no encontrada.</p>
             @endif
         @else
             <p>No se proporcionó el ID de la compra.</p>
