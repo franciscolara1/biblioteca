@@ -18,6 +18,8 @@
             <hr/>
             <h5>Cuotas<span>0</span></h5>
             <hr/>
+            <h5>Fecha:<span>{{$compra->created_at}}</span></h5>
+            <hr/>
             <h5 style="font-weight: bold">Monto Total<span class="text-success">${{$compra->total}}</span></h5>
             <hr/>
             @else
