@@ -4,7 +4,7 @@
 <div class="container boleta bg-white">
     <section class="contenido-boleta">
         <img src="{{ url('img/webpay_logo.png') }}" width="300" height="70" class="logo-transbank"alt="">
-        <h2 class="titulo-boleta">Comprobante de Pedido</h2>
+        <h2 class="titulo-boleta">Comprobante de Pago</h2>
         @if(isset($_GET['compra_id']))
             <?php $compra = \App\Models\Pago::find($_GET['compra_id']); ?>
             @if($compra)
@@ -28,6 +28,7 @@
         @else
             <p>No se proporcionó el ID de la compra.</p>
         @endif
+        <a href="{{ URL::route('prestamo') }}" class="btn btn-dark"style="margin-left:45%;margin-top:5%">Volver</a>
     </section>
     <p class="footer-boleta text-muted">Pago procesado por Transbank.</p>
 </div>

@@ -258,10 +258,8 @@
 
 
 <!-- ********** CHTABOT 3 ********** -->
-<button class="buttonchat" id="chat1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-<img class="imgchat" src="https://www.un.org/sites/un2.un.org/files/2020/08/chat.png" alt="">
-</button>
-
+<!-- Imagen del chat bot-->
+<img class="imgchat"id="chat1" src="{{ url('img/chatbot.png') }}" alt="chat bot"data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
 
 <div style="background-color:  #002366;" class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
